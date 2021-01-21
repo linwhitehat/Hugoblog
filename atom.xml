@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">林深时见璐</title>
     <subtitle type="html">L1n&#39;s Blog</subtitle>
-    <updated>2020-07-23T13:31:39&#43;08:00</updated>
+    <updated>2021-01-21T15:33:29&#43;08:00</updated>
     <id>https://example.com/</id>
     <link rel="alternate" type="text/html" href="https://example.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://example.com/atom.xml" />
@@ -16,6 +16,160 @@
             </author>
     <rights>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</rights>
     <generator uri="https://gohugo.io/" version="0.74.2">Hugo</generator>
+        <entry>
+            <title type="text">从Hexo.Next到Hugo.MemE</title>
+            <link rel="alternate" type="text/html" href="https://example.com/posts/2020/07/hexo2hugo/" />
+            <id>https://example.com/posts/2020/07/hexo2hugo/</id>
+            <updated>2020-07-27T14:32:54&#43;08:00</updated>
+            <published>2020-07-23T21:53:17&#43;08:00</published>
+            <author>
+                    <name>L1n</name>
+                    <uri>https://linwhitehat.github.io</uri>
+                    <email>eric_lin_cn@outlook.com</email>
+                    </author>
+            <rights>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</rights><summary type="html">去年10月左右开始搭建了基于 Next主题的 Hexo 博客，同时也对博客做了很多定制化内容，近期准备升级新版本主题和框架，但是却发现出现了一些问题： Next缺乏长期稳定的维护团队，目前经历三代维护人员的变更，都是因为前一代维护作者不再维护而带来的变更，而这带来一些奇怪的错误无法在社区解决的情况，例如我遇到的这个问题，目前在新旧两代维护社区中都未得到原因和准确处理办法。 ：Next的定制化程度很高，但是维护团队……</summary>
+            
+                <content type="html">&lt;p&gt;&lt;img src=&#34;&#34; alt=&#34;hugo博客&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;去年10月左右开始搭建了基于 Next主题的 Hexo 博客，同时也对博客做了很多定制化内容，近期准备升级新版本主题和框架，但是却发现出现了一些问题：&lt;/p&gt;
+&lt;p&gt;&lt;div class=checkbox&gt;
+&lt;input type=&#34;checkbox&#34; enabled=false checked&gt;&lt;/input&gt;
+&lt;p&gt;Next缺乏长期稳定的维护团队，目前经历三代维护人员的变更，都是因为前一代维护作者不再维护而带来的变更，而这带来一些奇怪的错误无法在社区解决的情况，例如我遇到的这个问题，目前在新旧两代维护社区中都未得到原因和准确处理办法。&lt;/p&gt;
+&lt;/div&gt;&lt;br /&gt;
+&lt;code&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34; /&gt; ：Next的定制化程度很高，但是维护团队在大版本或功能更新等情况下会改变主题的结构，官方团队也建议在跨大版本升级主题的时候做好旧版本备份，这将加大对博客主题做了大量个性化内容修改的更新成本，而且每次都需要准确的对照主题结构变化进行相应修改，花费精力不亚于一次博客迁移。&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34; /&gt; ：尽管 Hexo 框架下博客生成和加载速度有所提升，但是并不算最优，个性化配置下的内容显得有点杂乱和冗长，对主题的原版修改可能在出现问题时不便于版本回退。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最终在接近使用10个月的情况下，我还是准备放弃 Hexo，由于旧版本博客以 Github Page 形式发布，因此会维持原先的开源博客， 但是维护和修改的情况会大幅度减少，迁移后的 Hugo 博客将在新域名上搭建，预计在今年10月份之前完成。&lt;/p&gt;
+&lt;p&gt;迁移到 Hugo 框架下，我选择了友链中一个博主开发的 MemE 主题，简洁的主题风格以及对 Next 的样式继承，对于从 Next 迁移过来十分友好，其功能也十分强大&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;https://example.com/posts/2020/07/hexo2hugo/#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;完全的深色模式支持&lt;/li&gt;
+&lt;li&gt;支持 InstantClick 极速点击&lt;/li&gt;
+&lt;li&gt;完全的多语言支持&lt;/li&gt;
+&lt;li&gt;可自定义的 SVG 图标&lt;/li&gt;
+&lt;li&gt;支持 HTML/CSS/JS 的压缩和 JS 的捆包&lt;/li&gt;
+&lt;li&gt;代码高亮、脚注、Todo 列表、定义列表、Emoji&lt;/li&gt;
+&lt;li&gt;字体排版
+&lt;ul&gt;
+&lt;li&gt;自定义字体、字号、行间距&lt;/li&gt;
+&lt;li&gt;自定义文章内容宽度&lt;/li&gt;
+&lt;li&gt;段首缩排、两端对齐&lt;/li&gt;
+&lt;li&gt;首字下沉、小型大写&lt;/li&gt;
+&lt;li&gt;图片说明、图片脚注&lt;/li&gt;
+&lt;li&gt;着重号&lt;/li&gt;
+&lt;li&gt;中文标点符号字形纠正&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;归档页面、分类页面、标签云页面&lt;/li&gt;
+&lt;li&gt;Atom╱RSS 订阅&lt;/li&gt;
+&lt;li&gt;分节标题锚点&lt;/li&gt;
+&lt;li&gt;图片外链、视频外链&lt;/li&gt;
+&lt;li&gt;自定义页脚&lt;/li&gt;
+&lt;li&gt;404 页面、置顶╱排序文章&lt;/li&gt;
+&lt;li&gt;PWA 和 Service Worker 的更新通知&lt;/li&gt;
+&lt;li&gt;Google Analytics、Google Site Verification、Google AdSense&lt;/li&gt;
+&lt;li&gt;不蒜子页面浏览量和站点访客数、站点访问量&lt;/li&gt;
+&lt;li&gt;Disqus 评论、Valine 评论、Utterances 评论&lt;/li&gt;
+&lt;li&gt;KaTeX 和 MathJax 3.0 公式支持（包括化学方程式）&lt;/li&gt;
+&lt;li&gt;SEO 和社交网络相关：Sitemap、JSON-LD、Open Graph、Twitter Cards&lt;/li&gt;
+&lt;li&gt;支持部署在星际文件系统（IPFS）&lt;/li&gt;
+&lt;li&gt;······&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;基于 Go 开发的 Hugo 框架在生成页面的速度确实令人惊喜，同时 Meme 主题采取与 Hugo 框架根目录结构相同的这点，对于主题的变化几乎可以在 Hugo 结构下进行修改而不需要修改主题内容，对于博客主题个性化十分友好，同时很多在 Next 下需要自定义的功能也被集成到了 MemE 中，基于种种情况，我毫不犹豫迁移了博客，最终迁移及摸清楚大致的主题个性化花费了一天左右的时间，整体而言，目前博客的呈现效果和 Hexo 的时候差异不会太大，在个性化部分基本与之前对 Next 的修改差不多，明显的一些变化有：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首页从完全自制的&lt;a href=&#34;&#34;&gt;首页&lt;/a&gt;以及 Next 的文章摘要页变为单独的诗词页面，保持了我自制首页的简洁观念，同时视觉效果更好一点；&lt;/li&gt;
+&lt;li&gt;侧边栏被删去，但是我希望在阅读博客时侧边存在一个固定目录，这部分可能需要自己加上；&lt;/li&gt;
+&lt;li&gt;顶栏减少了导航键，部分导航键功能准备添加到首页作为诗词下方的控件，同时背景变为朦胧的彩色。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;尽管迁移了博客，但我依旧保留了旧博客的存在，文章不会做重定向的迁移，但是会向新博客做一个导引，希望在新博客下能创作更好的文章，更踏实的发表优质内容。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://io-oi.me/tech/documentation-of-hugo-theme-meme/&#34;&gt;Hugo 主题 MemE 文档&lt;/a&gt; &lt;a href=&#34;https://example.com/posts/2020/07/hexo2hugo/#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://example.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" term="技术分享" label="技术分享" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://example.com/categories/%E5%8D%9A%E5%AE%A2/" term="博客" label="博客" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://example.com/tags/hexo/" term="Hexo" label="Hexo" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://example.com/tags/hugo/" term="Hugo" label="Hugo" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://example.com/tags/blog/" term="Blog" label="Blog" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/" term="博客框架" label="博客框架" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://example.com/tags/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/" term="博客迁移" label="博客迁移" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://example.com/tags/next/" term="Next" label="Next" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://example.com/tags/meme/" term="MemE" label="MemE" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">B站投稿·视频无水印化</title>
             <link rel="alternate" type="text/html" href="https://example.com/posts/2020/06/30/b%E7%AB%99%E6%8A%95%E7%A8%BF/" />

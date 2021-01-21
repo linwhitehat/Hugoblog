@@ -3,8 +3,73 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://example.com/tags/blog/</loc>
+    <lastmod>2020-07-27T14:32:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/hexo/</loc>
+    <lastmod>2020-07-27T14:32:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/hugo/</loc>
+    <lastmod>2020-07-27T14:32:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/meme/</loc>
+    <lastmod>2020-07-27T14:32:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/next/</loc>
+    <lastmod>2020-07-27T14:32:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/2020/07/hexo2hugo/</loc>
+    <lastmod>2020-07-27T14:32:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2020-07-27T14:32:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2020-07-27T14:32:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/</loc>
+    <lastmod>2020-07-27T14:32:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</loc>
+    <lastmod>2020-07-27T14:32:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/</loc>
+    <lastmod>2020-07-27T14:32:54+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://example.com/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://example.com/"
+                />
+  </url>
+  
+  <url>
     <loc>https://example.com/about/</loc>
-    <lastmod>2020-07-23T01:15:23+08:00</lastmod>
+    <lastmod>2020-07-24T22:19:12+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -20,21 +85,6 @@
   <url>
     <loc>https://example.com/blogroll/</loc>
     <lastmod>2020-07-22T18:08:27+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/</loc>
-    <lastmod>2020-07-23T01:15:23+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://example.com/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://example.com/"
-                />
   </url>
   
   <url>
@@ -124,11 +174,6 @@
   
   <url>
     <loc>https://example.com/categories/%E5%B7%A5%E5%85%B7%E5%BA%93/</loc>
-    <lastmod>2020-07-22T20:21:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/</loc>
     <lastmod>2020-07-22T20:21:00+08:00</lastmod>
   </url>
   
@@ -273,11 +318,6 @@
   </url>
   
   <url>
-    <loc>https://example.com/tags/hexo/</loc>
-    <lastmod>2020-07-22T20:18:41+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://example.com/posts/2020/02/09/hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2pwa/</loc>
     <lastmod>2020-07-22T20:18:41+08:00</lastmod>
   </url>
@@ -288,17 +328,7 @@
   </url>
   
   <url>
-    <loc>https://example.com/categories/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2020-07-22T20:18:41+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://example.com/tags/mist-v7.7.0/</loc>
-    <lastmod>2020-07-22T20:18:18+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/tags/next/</loc>
     <lastmod>2020-07-22T20:18:18+08:00</lastmod>
   </url>
   
