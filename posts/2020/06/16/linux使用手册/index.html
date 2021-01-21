@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.74.2" /><meta name="theme-color" content="#fff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title>Linux使用手册 | 林深时见璐</title>
+
+    <link rel="stylesheet" href="../../../../../css/meme.min.7e2214024e94b01ef6b65dc39787357a299877ef23be0fd926b0369eb09fc7e9.css" integrity="sha256-fiIUAk6UsB72tl3Dl4c1eimYd&#43;8jvg/ZJrA2nrCfx&#43;k=" />
+
+    
+    
+        <script src="../../../../../js/meme.min.c5d0fc41b615fc50cc2299b86c88c6993fc8c3cb69a8eab60730ee9707f795ad.js" integrity="sha256-xdD8QbYV/FDMIpm4bIjGmT/Iw8tpqOq2BzDulwf3la0="></script>
+
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="L1n" /><meta name="description" content="Ubuntu作为Linux系统分支中十分流行的操作系统，2020年以前已经发布最新19.10版本，同时全球市场占有率也排名第3（统计来源），作为经典的Linux桌面系统，目前的生态是向好的，而且即将发布的Ubuntu 20.04 LTS也许将带来更多的惊喜，对于想尝试Linux系统的新手而言，这是挺好的一个选择。现在Ubuntu的中文支持也很好，推出了中文版Ubuntu即优麒麟（Ubuntu Kylin）。本文……" />
+
+    <link rel="shortcut icon" href="../../../../../favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="../../../../../icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../../icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="林深时见璐" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="林深时见璐" />
+    <meta name="msapplication-starturl" content="../../../../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../../../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="../../../../../manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://example.com/posts/2020/06/16/linux%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" />
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2020-06-16T11:26:17+00:00",
+        "dateModified": "2020-07-22T20:20:43+08:00",
+        "url": "https://example.com/posts/2020/06/16/linux%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/",
+        "headline": "Linux使用手册",
+        "description": "Ubuntu作为Linux系统分支中十分流行的操作系统，2020年以前已经发布最新19.10版本，同时全球市场占有率也排名第3（统计来源），作为经典的Linux桌面系统，目前的生态是向好的，而且即将发布的Ubuntu 20.04 LTS也许将带来更多的惊喜，对于想尝试Linux系统的新手而言，这是挺好的一个选择。现在Ubuntu的中文支持也很好，推出了中文版Ubuntu即优麒麟（Ubuntu Kylin）。本文……",
+        "inLanguage" : "zh-CN",
+        "articleSection": "posts",
+        "wordCount":  9511 ,
+        "image": ["https://example.com/images/Linux-2.webp","https://example.com/images/Linux-1-1.webp","https://example.com/images/Linux-1-2.png","https://example.com/images/Linux-15.webp","https://example.com/images/Linux-16.webp","https://example.com/images/Linux-5.webp","https://example.com/images/Linux-6.webp","https://example.com/images/Linux-7.webp","https://example.com/images/Linux-8.webp","https://example.com/images/Linux-9.webp","https://example.com/images/Linux-10.webp","https://example.com/images/Linux-11.webp","https://example.com/images/Linux-12.webp","https://example.com/images/Linux-13.webp","https://example.com/images/Linux-14.webp","https://example.com/images/Linux-pinyin-1.webp","https://example.com/images/Linux-fcitx.png","https://example.com/images/Linux-fcitx-2.webp","https://example.com/images/Linux-pinyin-2.webp","https://example.com/images/Linux-pinyin-3.webp","https://example.com/images/Linux-pinyin-4.webp","https://example.com/images/vi-vim-cheat-sheet.webp","https://example.com/images/Linux-17.webp","https://example.com/images/Linux-3.png","https://example.com/images/Linux-4.png"],
+        "author": {
+            "@type": "Person",
+            "description": "Work-Life-Balance",
+            "email": "eric_lin_cn@outlook.com",
+            "image": "https://example.com/icons/apple-touch-icon.png",
+            "url": "https://linwhitehat.github.io",
+            "name": "L1n"
+        },
+        "license": "本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。",
+        "publisher": {
+            "@type": "Organization",
+            "name": "林深时见璐",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/icons/apple-touch-icon.png"
+            },
+            "url": "https://example.com/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://example.com/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+
+
+
+    
+
+
+
+<meta property="og:title" content="Linux使用手册" />
+<meta property="og:description" content="Ubuntu作为Linux系统分支中十分流行的操作系统，2020年以前已经发布最新19.10版本，同时全球市场占有率也排名第3（统计来源），作为经典的Linux桌面系统，目前的生态是向好的，而且即将发布的Ubuntu 20.04 LTS也许将带来更多的惊喜，对于想尝试Linux系统的新手而言，这是挺好的一个选择。现在Ubuntu的中文支持也很好，推出了中文版Ubuntu即优麒麟（Ubuntu Kylin）。本文……" />
+<meta property="og:url" content="https://example.com/posts/2020/06/16/linux%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" />
+<meta property="og:site_name" content="林深时见璐" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://example.com/images/Linux-2.webp" />
+<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-06-16T11:26:17&#43;00:00" />
+    <meta property="article:modified_time" content="2020-07-22T20:20:43&#43;08:00" />
+    
+    <meta property="article:section" content="posts" />
+
+
+
+    
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma&#43;Shan&#43;Zheng&amp;text=L1n%27sBlog%e6%9e%97%e6%b7%b1%e6%97%b6%e8%a7%81%e7%92%90&amp;display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma&#43;Shan&#43;Zheng&amp;text=L1n%27sBlog%e6%9e%97%e6%b7%b1%e6%97%b6%e8%a7%81%e7%92%90&amp;display=swap" /></noscript>
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header" data-scroll-header>
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="../../../../../" class="brand">林深时见璐</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item active"><a href="../../../../../posts/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon archives"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">归档</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="../../../../../categories/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon categories"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg><span class="menu-item-name">分类</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="../../../../../tags/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon tags"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg><span class="menu-item-name">标签</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="../../../../../about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon about"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="../../../../../blogroll/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon friends"><path d="M384 312.7c-55.1 136.7-187.1 54-187.1 54-40.5 81.8-107.4 134.4-184.6 134.7-16.1 0-16.6-24.4 0-24.4 64.4-.3 120.5-42.7 157.2-110.1-41.1 15.9-118.6 27.9-161.6-82.2 109-44.9 159.1 11.2 178.3 45.5 9.9-24.4 17-50.9 21.6-79.7 0 0-139.7 21.9-149.5-98.1 119.1-47.9 152.6 76.7 152.6 76.7 1.6-16.7 3.3-52.6 3.3-53.4 0 0-106.3-73.7-38.1-165.2 124.6 43 61.4 162.4 61.4 162.4.5 1.6.5 23.8 0 33.4 0 0 45.2-89 136.4-57.5-4.2 134-141.9 106.4-141.9 106.4-4.4 27.4-11.2 53.4-20 77.5 0 0 83-91.8 172-20z"/></svg><span class="menu-item-name">友链</span></a>
+                </li>
+            
+        
+            
+                
+                    
+                    
+                        <li class="menu-item">
+                            <a id="theme-switcher" href="#"><span class="icon theme-icon-light">🌞</span><span class="icon theme-icon-dark">🌙</span></a>
+                        </li>
+                    
+                
+            
+        
+            
+                
+                    
+                        
+                        
+                    
+                
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post" data-align="justify" data-type="posts" data-layout="post" data-toc-num="true">
+
+            <h1 class="post-title">Linux使用手册</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2020-06-16T11:26:17&#43;00:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2020-06-16</time>
+    
+    
+        
+        <time datetime="2020-07-22T20:20:43&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020-07-22</time>
+    
+    
+    
+        
+        
+            
+            
+                
+                
+                
+                
+                    
+                    
+                    
+                
+            
+            
+            
+        
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;9511</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;19&nbsp;分钟</span>
+    
+    
+    
+</div>
+
+            
+
+            <div class="post-body">
+              <p><a href="https://ubuntu.com/" target="_blank" rel="noopener">Ubuntu</a>作为Linux系统分支中十分流行的操作系统，2020年以前已经发布最新19.10版本，同时全球市场占有率也排名第3（<a href="https://zh.hostadvice.com/marketshare/os/" target="_blank" rel="noopener">统计来源</a>），作为经典的Linux桌面系统，目前的生态是向好的，而且即将发布的Ubuntu 20.04 LTS也许将带来更多的惊喜，对于想尝试Linux系统的新手而言，这是挺好的一个选择。现在Ubuntu的中文支持也很好，推出了中文版Ubuntu即优麒麟（<a href="https://cn.ubuntu.com/desktop" target="_blank" rel="noopener">Ubuntu Kylin</a>）。本文的很多用法不局限于个人使用较多的Ubuntu或商业使用较多的Centos，对于多数常用的Linux发行版本都可适用。<br />
+<img src="../../../../../images/Linux-2.webp" alt="Ubuntu 20.04" /><span class="caption">◎ Ubuntu 20.04</span></p>
+<!-- more -->
+<p style="text-indent:0"><span class="drop-cap">根</span>据2020年5月Statcounter的调查，桌面操作系统市场中Linux占比为<code>1.68%</code>，而根据W3Techs的调查，服务器操作系统Linux占比达到<code>43.1%</code>，根据Top500的统计，2019始超级电脑操作系统占比中Linux则占据<code>100%</code>。相比于Windows占据桌面操作系统市场，Linux在服务器端以及超级电脑方面则处于绝对地位，对Linux及其衍生系统的学习也是必要的。<br />
+<img src="../../../../../images/Linux-1-1.webp" alt="Linux全球桌面操作系统占比" /><span class="caption">◎ Linux全球桌面操作系统占比</span><br />
+<img src="../../../../../images/Linux-1-2.png" alt="Linux全球服务器操作系统占比" /><span class="caption">◎ Linux全球服务器操作系统占比</span></p>
+<h2 id="基础"><a href="#基础" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>基础</h2>
+<h3 id="目录结构"><a href="#目录结构" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>目录结构</h3>
+<p>Ubuntu的文件系统目录结构可以参照Linux的目录结构，相比使用Windows系统，在使用Linux系统中对文件目录的了解是至关重要的。此处我罗列了Linux的文件系统目录标准（FHS）以及特殊的目录及用途<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">[1]</a></sup>。</p>
+<ol>
+<li>FHS<br />
+<img src="../../../../../images/Linux-15.webp" alt="文件系统目录标准" /><span class="caption">◎ 文件系统目录标准</span></li>
+<li>特殊目录<br />
+<img src="../../../../../images/Linux-16.webp" alt="特殊目录" /><span class="caption">◎ 特殊目录</span></li>
+</ol>
+<h3 id="linux终端命令"><a href="#linux终端命令" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Linux终端命令</h3>
+<p>使用Linux系统则意味着可以随时摆脱桌面的存在，将更多资源赋予更需要的程序进程使用，而脱离桌面后所有的系统操作都将使用终端下的命令来完成，这也使得操作更加快捷高效。之前看到来自<a href="https://linuxtoy.org/" target="_blank" rel="noopener">LinuxTOY</a>的一份<code>Unix/Linux 命令参考</code><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">[2]</a></sup>，便转载自此，基本都是常用且基础的终端命令。</p>
+<ol>
+<li>文件命令<br />
+<img src="../../../../../images/Linux-5.webp" alt="文件命令" /><span class="caption">◎ 文件命令</span></li>
+<li>系统信息<br />
+<img src="../../../../../images/Linux-6.webp" alt="系统信息" /><span class="caption">◎ 系统信息</span></li>
+<li>压缩<br />
+<img src="../../../../../images/Linux-7.webp" alt="压缩" /><span class="caption">◎ 压缩</span></li>
+<li>进程管理<br />
+<img src="../../../../../images/Linux-8.webp" alt="进程管理" /><span class="caption">◎ 进程管理</span></li>
+<li>网络<br />
+<img src="../../../../../images/Linux-9.webp" alt="网络" /><span class="caption">◎ 网络</span></li>
+<li>文件权限<br />
+<img src="../../../../../images/Linux-10.webp" alt="文件权限" /><span class="caption">◎ 文件权限</span></li>
+<li>安装<br />
+<img src="../../../../../images/Linux-11.webp" alt="安装" /><span class="caption">◎ 安装</span></li>
+<li>SSH<br />
+<img src="../../../../../images/Linux-12.webp" alt="SSH" /><span class="caption">◎ SSH</span></li>
+<li>快捷键<br />
+<img src="../../../../../images/Linux-13.webp" alt="快捷键" /><span class="caption">◎ 快捷键</span></li>
+<li>搜索<br />
+<img src="../../../../../images/Linux-14.webp" alt="搜索" /><span class="caption">◎ 搜索</span></li>
+</ol>
+<h3 id="修改软件源"><a href="#修改软件源" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>修改软件源</h3>
+<p>在Linux的软件管理体系中，软件源是关键所在，由于流行Linux系统多数服务器不在国内，不少国内用户安装完Linux系统之后首要做的就是修改软件源，这样更新或安装下载时速度会相对快。针对不同的Linux发行版，软件源是存在差异的，从我认知的主流Linux分支操作系统而言，可以有以下两种：</p>
+<ol>
+<li>Ubuntu（Debian），使用apt-get源，使用包管理工具 Advanced Packaging Tool；</li>
+<li>CentOS，使用yum源，使用软件包管理器 Yellow dog Updater, Modified。<br />
+这两种的源修改方式原理是一致的，所以我按以下步骤来叙述：</li>
+<li>国内源<br />
+国内不少企业或高校都有做源镜像，选择也有很多，我这里主要介绍阿里源、中科大源、清华源和网易源（均以Ubuntu为例）：</li>
+</ol>
+<ul>
+<li>阿里源，即<a href="https://developer.aliyun.com/mirror/" target="_blank" rel="noopener">阿里云开源镜像站</a>，选择<code>Ubuntu</code>，会给出不同版本所需的源信息，使用对应版本的即可。</li>
+<li>中科大源，即<a href="http://mirrors.ustc.edu.cn/help/index.html" target="_blank" rel="noopener">USTC Mirror</a>，选择<code>Ubuntu源使用帮助</code>，会给出详细的源修改过程与选择。</li>
+<li>清华源，即<a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="noopener">清华大学开源软件镜像站</a>，选择<code>Ubuntu</code>旁边的<code>❓</code>即可看到源信息。</li>
+<li>网易源，即<a href="https://mirrors.163.com/" target="_blank" rel="noopener">网易开源镜像站</a>，选择最右侧一栏的<code>Ubuntu使用帮助</code>即可看到不同版本的源信息。</li>
+</ul>
+<ol start="2">
+<li>更改源路径<br />
+在修改源之前，对旧源文件做个备份，之后即可添加上述任意一个国内源信息到Ubuntu源文件<code>sources.list</code>或下载源文件到centos生成缓存，完成源文件修改如下：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># Ubuntu</span>
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
+sudo vim /etc/apt/sources.list <span class="c1">#之后添加国内源信息到文件并保存</span>
+sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get upgrade
+
+<span class="c1"># CentOS</span>
+mv /etc/yum.repos.d/Centos.repo /etc/yum.repos.d/Centos.repo.backup
+<span class="nb">cd</span> /etc/yum.repos.d/
+wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
+yum clean all<span class="p">;</span> yum makecache
+yum -y update
+</code></pre></td></tr></table></div>
+</div>
+</div><ol start="3">
+<li>源描述<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">[3]</a></sup><br />
+其实源本身是有一定结构的，以Ubuntu16.04版本的中科大源为例子：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">xenial</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse</span>
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">xenial</span><span class="o">-</span><span class="n">updates</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span>
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">xenial</span><span class="o">-</span><span class="n">backports</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span>
+<span class="n">deb</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span> <span class="n">xenial</span><span class="o">-</span><span class="n">security</span> <span class="n">main</span> <span class="n">restricted</span> <span class="n">universe</span> <span class="n">multiverse</span>
+<span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li>第一个单词代表包的类型，deb表示二进制包，deb-src表示源码包。</li>
+<li>第二个网址表示源的地址。</li>
+<li>第三个单词表示系统的版本，既可以是[ wheezy | jessie | stretch | sid ]中的一种，也可以是[ oldstable | stable | testing | unstable ]中的一种。前一个系列表示系统的release code name，后一个系列表示系统的release class，前者按阶段发布，后者持续演进。例如在Ubuntu系统中，<code>xenial</code>代表的是Ubuntu16.04版本，如果是其他版本可将其替换为其他版本代号即可: <code>20.04</code>:<code>focal</code>；<code>18.04</code>：<code>bionic</code>；<code>17.10</code>：<code>artful</code>；<code>16.04</code>：<code>xenial</code>；<code>14.04</code>：<code>trusty</code>。</li>
+<li>第四部分表示接受哪种开源类型的软件，可以包含[ main | contrib | non-free ]中的一个或多个。main表示纯正的遵循Debian开源规范的软件，contrib表示遵循Debian开源规范但依赖于其它不遵循Debian开源规范的软件的软件，non-free表示不遵循Debian开源规范的软件。Debian开源规范指DFSG（Debian 自由软件指导方针）。</li>
+</ul>
+<h3 id="中文输入法"><a href="#中文输入法" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>中文输入法</h3>
+<p>Linux系统本身输入法并没有带中文输入，对于习惯使用中文环境的国人会比较不适应，尽管常态下英文也足够使用，但是增加中文输入法并不困难，在熟悉的输入法下也会舒服一点。默认情况下，Ubuntu系统自带中文输入法，且切换快捷键为<code>win+space</code>，但是体验并不流畅，故我更愿意花几分钟安装更舒服的中文输入法。中文输入法（Ubuntu）设置步骤如下：</p>
+<ol>
+<li>设置语言<br />
+Ubuntu18.04环境下，点击系统设置<code>Settings -&gt; Region&amp;Language -&gt; Manage Installed Languages -&gt;language support</code>，首次会要求安装默认语言和输入法并输入密码，可以看到默认的输入法是IBus。</li>
+<li>安装中文输入法<br />
+此处选择安装的中文输入法是fcitx（Fcitx[ˈfaɪtɪks]是 （Free Chinese Input Toy for X） 的英文缩写，中文名为小企鹅输入法），执行<code>sudo apt-get install fcitx-table-wbpy</code>安装fcitx，然后在输入法设置处选择<code>fcutx</code>然后重启。<br />
+<img src="../../../../../images/Linux-pinyin-1.webp" alt="选择输入法" /><span class="caption">◎ 选择输入法</span></li>
+<li>配置输入法<br />
+重启后，在桌面菜单栏右上角可以看到多出一个类似键盘的图标即fcitx，点击选择<code>Configuration</code>或中文语言下的<code>配置</code>,添加输入法，默认存在英语输入法，再添加拼音即可，如果当前系统语言非中文环境，则不要勾选<code>Only Show Current Language</code>，添加完成拼音之后，按下快捷键<code>Ctrl+Space</code>即可切换中英文输入法。<br />
+<img src="../../../../../images/Linux-fcitx.png" alt="fcitx输入法图标" /><span class="caption">◎ fcitx输入法图标</span><br />
+<img src="../../../../../images/Linux-fcitx-2.webp" alt="fcitx输入法" /><span class="caption">◎ fcitx输入法</span><br />
+<img src="../../../../../images/Linux-pinyin-2.webp" alt="配置输入法" /><span class="caption">◎ 配置输入法</span><br />
+<img src="../../../../../images/Linux-pinyin-3.webp" alt="添加拼音输入法" /><span class="caption">◎ 添加拼音输入法</span><br />
+<img src="../../../../../images/Linux-pinyin-4.webp" alt="使用中文输入法" /><span class="caption">◎ 使用中文输入法</span></li>
+</ol>
+<h3 id="系统磁盘清理"><a href="#系统磁盘清理" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>系统磁盘清理</h3>
+<p>当系统磁盘存储空间被占满后，许多便捷的操作会受限而无法继续，同时写操作也将无法进行，此时找到占用存储空间最大的文件并删除是较快速清理磁盘空间的方法。执行<code>df -h</code>可以查看当前磁盘空间占用情况，之后便通过<code>df</code>和<code>du</code>进行大文件的快速定位：<br />
+定位的方法便是从根目录开始，找出每一级目录下存储占用最高的目录，逐级查找，直至找到最终文件，通过逐级对大文件目录的递减排序可以很快找到占用空间大的文件，查找命令如下。</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">du -h / --max-depth<span class="o">=</span><span class="m">1</span> <span class="p">|</span> sort -hr <span class="p">|</span> head -n <span class="m">10</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="vim编辑器"><a href="#vim编辑器" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>vim编辑器</h3>
+<p>作为Linux系统下默认的编辑器，也是手撸代码的利器，不掌握基本的使用对使用Linux系统还是有些许不便，因此我参照菜鸟教程<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup>简要叙述vim的基本使用。<br />
+<img src="../../../../../images/vi-vim-cheat-sheet.webp" alt="vim键盘图" /><span class="caption">◎ vim键盘图</span></p>
+<ol>
+<li>vim使用<br />
+vi/vim 共分为三种模式，分别是命令模式（Command mode），输入模式（Insert mode）和底线命令模式（Last line mode）。 这三种模式的作用分别是：<br />
+①命令模式。用户在终端输入<code>vi</code>或<code>vim</code>，便进入了命令模式。此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。常用命令如下：</li>
+</ol>
+<ul>
+<li><code>i</code>：切换到输入模式，以输入字符</li>
+<li><code>x</code>：删除当前光标所在处的字符</li>
+<li><code>:</code>：切换到底线命令模式，以在最底一行输入命令<br />
+②输入模式。在命令模式下按下<code>i</code>就进入了输入模式。在输入模式中，可以使用以下按键：</li>
+<li>字符按键以及Shift组合，输入字符</li>
+<li>ENTER，回车键，换行</li>
+<li>BACK SPACE，退格键，删除光标前一个字符</li>
+<li>DEL，删除键，删除光标后一个字符</li>
+<li>方向键，在文本中移动光标</li>
+<li>HOME/END，移动光标到行首/行尾</li>
+<li>Page Up/Page Down，上/下翻页</li>
+<li>Insert，切换光标为输入/替换模式，光标将变成竖线/下划线</li>
+<li>ESC，退出输入模式，切换到命令模式<br />
+③底线命令模式。在命令模式下按下<code>:</code>（英文冒号）就进入了底线命令模式。底线命令模式可以输入单个或多个字符的命令，在底线命令模式中，基本的命令有：</li>
+<li><code>q</code>：退出程序</li>
+<li><code>w</code>：保存文件</li>
+<li>按ESC键可随时退出底线命令模式<br />
+<img src="../../../../../images/Linux-17.webp" alt="vim工作模式状态图" /><span class="caption">◎ vim工作模式状态图</span></li>
+</ul>
+<ol start="2">
+<li>按键说明<br />
+在上述基本使用的按键之外，vim还有许多按键可用，对于三种模式下依然有不同的按键。此处简要列述常用的部分，其余可参照菜鸟教程<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">[4]</a></sup>叙述。<br />
+①一般模式下可用的光标移动、复制粘贴、搜索等：</li>
+</ol>
+  <div class="table-container"><table>
+    <tr>
+      <td colspan="2">移动光标的方法</td>
+    </tr>
+    <tr>
+      <td>h 或 向左箭头键(←)</td>
+      <td>光标向左移动一个字符</td>
+    </tr>
+    <tr>
+      <td>j 或 向下箭头键(↓)</td>
+      <td>光标向下移动一个字符</td>
+    </tr>
+    <tr>
+      <td>k 或 向上箭头键(↑)</td>
+      <td>光标向上移动一个字符</td>
+    </tr>
+    <tr>
+      <td>l 或 向右箭头键(→)</td>
+      <td>光标向右移动一个字符</td>
+    </tr>
+    <tr>
+      <td>0 或功能键[Home]</td>
+      <td>数字 0：移动到这一行的最前面字符处 (常用)</td>
+    </tr>
+    <tr>
+      <td>$ 或功能键[End]</td>
+      <td>移动到这一行的最后面字符处(常用)</td>
+    </tr>
+    <tr>
+      <td colspan="2">搜索替换</td>
+    </tr>
+    <tr>
+      <td>/word</td>
+      <td>向光标之下寻找一个名称为 word 的字符串。例如要在档案内搜寻 vbird 这个字符串，就输入 /vbird 即可！ (常用)</td>
+    </tr>
+    <tr>
+      <td>?word</td>
+      <td>向光标之上寻找一个字符串名称为 word 的字符串。</td>
+    </tr>
+    <tr>
+      <td>n</td>
+       <td>这个 n 是英文按键。代表重复前一个搜寻的动作。举例来说， 如果刚刚我们执行 /vbird 去向下搜寻 vbird 这个字符串，则按下 n 后，会向下继续搜寻下一个名称为 vbird 的字符串。如果是执行 ?vbird 的话，那么按下 n 则会向上继续搜寻名称为 vbird 的字符串！</td>
+    </tr>
+    <tr>
+      <td>N</td>
+      <td>这个 N 是英文按键。与 n 刚好相反，为『反向』进行前一个搜寻动作。 例如 /vbird 后，按下 N 则表示『向上』搜寻 vbird 。</td>
+    </tr>
+  </table></div>
+  ②一般模式切换到编辑模式的可用的按键如下（下述这些按键中，在 vi 画面的左下角处会出现『--INSERT--』或『--REPLACE--』的字样。 由名称就知道该动作了。特别注意的是，上面也提过了，你想要在文档里面输入字符时， 一定要在左下角处看到 INSERT 或 REPLACE 才能输入。）：
+  <div class="table-container"><table>
+    <tr>
+      <td colspan="2">进入输入或取代的编辑模式</td>
+    </tr>
+    <tr>
+      <td>i, I</td>
+      <td>进入输入模式(Insert mode)：i 为『从目前光标所在处输入』， I 为『在目前所在行的第一个非空格符处开始输入』。 (常用)</td>
+    </tr>
+    <tr>
+      <td>a, A</td>
+      <td>进入输入模式(Insert mode)：a 为『从目前光标所在的下一个字符处开始输入』， A 为『从光标所在行的最后一个字符处开始输入』。(常用)</td>
+    </tr>
+    <tr>
+      <td>o, O</td>
+      <td>进入输入模式(Insert mode)：英文字母 o 为『在目前光标所在的下一行处输入新的一行』，大写字母 O 为在目前光标所在处的上一行输入新的一行！(常用)</td>
+    </tr>
+    <tr>
+      <td>r, R</td>
+      <td>进入取代模式(Replace mode)：r 只会取代光标所在的那一个字符一次；R会一直取代光标所在的文字，直到按下 ESC 为止；(常用)</td>
+    </tr>
+    <tr>
+      <td>[Esc]</td>
+      <td>退出编辑模式，回到一般模式中(常用)</td>
+    </tr>
+  </table></div>
+  ③一般模式切换到指令行模式的可用的按键如下（注意一下啊，惊叹号 (!) 在 vi 当中，常常具有『强制』的意思～）：
+  <div class="table-container"><table>
+    <tr>
+      <td colspan="2">指令行的储存、离开等指令</td>
+    </tr>
+    <tr>
+      <td>:w</td>
+      <td>将编辑的数据写入硬盘档案中(常用)</td>
+    </tr>
+    <tr>
+      <td>:w!</td>
+      <td>若文件属性为『只读』时，强制写入该档案。不过，到底能不能写入， 还是跟你对该档案的档案权限有关啊！</td>
+    </tr>
+    <tr>
+      <td>:q</td>
+      <td>离开 vi (常用)</td>
+    </tr>
+    <tr>
+      <td>:q!</td>
+      <td>若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。</td>
+    </tr>
+    <tr>
+      <td>:wq</td>
+      <td>储存后离开，若为 :wq! 则为强制储存后离开 (常用)</td>
+    </tr>
+    <tr>
+      <td>ZZ</td>
+      <td>这是大写的 Z 喔！若档案没有更动，则不储存离开，若档案已经被更动过，则储存后离开！</td>
+    </tr>
+    <tr>
+      <td>:w [filename]</td>
+      <td>将编辑的数据储存成另一个档案（类似另存新档）</td>
+    </tr>
+    <tr>
+      <td>:r [filename]</td>
+      <td>在编辑的数据中，读入另一个档案的数据。亦即将 『filename』 这个档案内容加到游标所在行后面</td>
+    </tr>
+    <tr>
+      <td>:n1,n2 w [filename]</td>
+      <td>将 n1 到 n2 的内容储存成 filename 这个档案。</td>
+    </tr>
+    <tr>
+      <td>:! command</td>
+      <td>暂时离开 vi 到指令行模式下执行 command 的显示结果！例如『:! ls /home』即可在 vi 当中察看 /home 底下以 ls 输出的档案信息！</td>
+    </tr>
+  </table></div>
+<h2 id="进阶使用"><a href="#进阶使用" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>进阶使用</h2>
+<h3 id="修改root密码"><a href="#修改root密码" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>修改root密码</h3>
+<p>默认Ubuntu下安装完系统只是设置了用户账号密码，root用户则处于默认情况，要更改root密码可在当前用户下执行：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo passwd root
+</code></pre></td></tr></table></div>
+</div>
+</div><p>输入两次需要设置的密码即可，密码是看不到的，如果输错则无法撤销，可以按下<code>ctrl + C</code>然后重新执行上述命令设置密码。</p>
+<h3 id="使用root登录ssh"><a href="#使用root登录ssh" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>使用root登录ssh</h3>
+<p>修改<code>ssh</code>登录的配置文件<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">[5]</a></sup>：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 切换到root用户</span>
+su root
+<span class="c1"># 修改ssh端口，此处是修改为666</span>
+sed -i <span class="s1">&#39;s/^.*Port.*/Port 666/g&#39;</span> /etc/ssh/sshd_config <span class="o">&amp;&amp;</span> sed -i <span class="s1">&#39;s/^.*PermitRootLogin.*/PermitRootLogin yes/g&#39;</span> /etc/ssh/sshd_config <span class="o">&amp;&amp;</span> sed -i <span class="s1">&#39;s/^.*PasswordAuthentication.*/PasswordAuthentication yes/g&#39;</span> /etc/ssh/sshd_config
+<span class="c1"># 防火墙放行666端口</span>
+ufw allow 666/tcp
+<span class="c1"># 重启ssh服务</span>
+service ssh restart
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="终端查看并关闭端口"><a href="#终端查看并关闭端口" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>终端查看并关闭端口</h3>
+<p>在终端下执行以下命令<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">[6]</a></sup>：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 查看已经连接的服务端口（ESTABLISHED）</span>
+netstat -a
+<span class="c1"># 查看所有的服务端口（LISTEN，ESTABLISHED）</span>
+netstat -ap
+<span class="c1"># 查看指定端口8080</span>
+netstat -ap <span class="p">|</span> grep <span class="m">8080</span>
+<span class="c1"># 另一种查看指定端口方法</span>
+lsof -i:8080
+<span class="c1"># 关闭端口对应进程pid</span>
+<span class="nb">kill</span> -9 PID号
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="测试ubuntu-vps主机性能"><a href="#测试ubuntu-vps主机性能" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>测试Ubuntu VPS主机性能</h3>
+<p>这部分是针对购买vps的一个建议，因为vps的价格往往与机子本身的硬件性能直接挂钩，购买vps都希望自己的机子是货真价实的，那么对机子的读写、网络及其他性能测试还是有必要的，参照这篇测试博文<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">[7]</a></sup>做了简单的转述。</p>
+<ol>
+<li>测试海外vps到国内的速度<br />
+一键测试服务器到国内的速度脚本Superspeed.sh ：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">wget https://raw.githubusercontent.com/oooldking/script/master/superspeed.sh
+chmod +x superspeed.sh
+./superspeed.sh
+</code></pre></td></tr></table></div>
+</div>
+</div><ol start="2">
+<li>全面测评<br />
+使用Zench，一键检测VPS的CPU、内存、负载、IO读写、机房带宽等，同时包含Virt 检测服务器类型参数，常见 openvz，kvm，独服都能检测出来，此外加入 Ping 以及 路由测试 功能，会生成测评报告：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/ZBench/master/ZBench-CN.sh <span class="o">&amp;&amp;</span> bash ZBench-CN.sh
+<span class="c1">#项目：https://github.com/FunctionClub/ZBench</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ol start="3">
+<li>性能跑分<br />
+VPS性能综合跑分工具<code>unixbench</code>：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">wget --no-check-certificate https://github.com/teddysun/across/raw/master/unixbench.sh
+chmod +x unixbench.sh
+./unixbench.sh
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="linux远程"><a href="#linux远程" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Linux远程</h3>
+<h4 id="后台运行程序"><a href="#后台运行程序" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>后台运行程序</h4>
+<p>对于多数服务器，基本都是通过 SSH 进行远程连接，而部署程序到服务器后不希望程序在退出远程控制界面后中断，便需要后台运行程序。<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">[8]</a></sup></p>
+<h4 id="linux系统相关概念"><a href="#linux系统相关概念" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Linux系统相关概念</h4>
+<ul>
+<li>进程组(process group): 一个或多个进程的集合,每一个进程组有唯一一个进程组ID,即进程组长进程的ID.</li>
+<li>会话期(session): 一个或多个进程组的集合,有唯一一个会话期首进程(session leader). 会话期ID为首进程的ID.</li>
+<li>会话期可以有一个单独的控制终端(controlling terminal).</li>
+<li>与控制终端连接的会话期首进程叫做控制进程(controlling process).</li>
+<li>当前与终端交互的进程称为前台进程组.</li>
+<li>其余进程组称为后台进程组.</li>
+<li>根据POSIX.1定义: 挂断信号(SIGHUP)默认的动作是终止程序.</li>
+<li>守护进程本身的特殊性使得这类进程不受远程连接进程的影响，因为是相互独立的两个进程组，即使 SSH 关闭也不会导致守护进程终止.</li>
+</ul>
+<h4 id="后台运行方法"><a href="#后台运行方法" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>后台运行方法</h4>
+<ol>
+<li>在远程开启<code>tmux</code>，在<code>tmux</code>里运行程序</li>
+<li>使用<code>nohup</code>命令执行程序</li>
+</ol>
+<h4 id="终止后台运行程序"><a href="#终止后台运行程序" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>终止后台运行程序</h4>
+<p>由于程序后台运行，因此也就不能使用Linux的终止命令直接终止程序，此时如果不需要程序继续后台执行，需要通过以下方法终止程序：</p>
+<ol>
+<li>查看程序对应的进程，可以通过<code>ps -aux | grep python</code>来查看 python 脚本的所在进程，找到进程号。</li>
+<li>杀死进程进而终止程序，执行<code>kill -9 PID</code>，其中 PID 是程序对应的进程号。</li>
+</ol>
+<h3 id="linux系统安装python3"><a href="#linux系统安装python3" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Linux系统安装python3</h3>
+<p>之所以在这部分内容中加入python3安装是因为旧版或部分Linux系统中默认安装的是python2，而习惯使用python3或需要做代码迁移的时候还是想在python3环境下运行，加上python2与python3是可并存的，此时安装python3便顺理成章，只是需要解决一些冲突，因此在此作为Linux的一种进阶使用说明进行叙述，由于Ubuntu系统使用apt安装十分便捷，此处以centos为例子进行讲述<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">[9]</a></sup>。</p>
+<h4 id="安装依赖包"><a href="#安装依赖包" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>安装依赖包</h4>
+<p>依赖包的安装是安装python3时顺利的基础，这是编译安装时需要的依赖环境，安装如下：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make
+</code></pre></td></tr></table></div>
+</div>
+</div><h4 id="下载python3"><a href="#下载python3" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>下载python3</h4>
+<p>根据自身的需求，从python官网下载所需的版本压缩包，比如下载目前最新版即python3.8.3，则在本地选择安装的文件目录，然后下载：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">wget https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tgz
+</code></pre></td></tr></table></div>
+</div>
+</div><p>在当前目录下解压便可获得名为<code>Pyhton-3.8.3</code>的文件夹，解压和安装可执行下述命令：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">tar -zxvf Python-3.8.3.tgz
+<span class="nb">cd</span> Python-3.8.3
+./configure
+make<span class="o">&amp;&amp;</span>make install
+</code></pre></td></tr></table></div>
+</div>
+</div><p>顺利的话则安装完成，若出现错误如<code>ModuleNotFound：No module named '_ctypes'</code>则执行下述命令后继续执行上述安装命令：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">yum install libffi-devel -y
+</code></pre></td></tr></table></div>
+</div>
+</div><p>至此，基本完成python3的安装，默认安装位置是在<code>/usr/local/bin/</code>。</p>
+<h4 id="配置默认python"><a href="#配置默认python" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>配置默认python</h4>
+<p>为了便于调用，可以将python3设置为默认python调用，步骤如下：<br />
+①备份旧python命令，<code>mv /usr/bin/python /usr/bin/python.bak</code><br />
+②添加python3的软链接，<code>ln -s /usr/local/bin/python3 /usr/bin/python</code><br />
+同时，将<code>pip3</code>一并修改为默认的pip调用，可以通过<code>find / -name 'pip3'</code>找到pip3的位置，步骤如下：<br />
+①备份旧pip命令，<code>mv /usr/bin/pip /usr/bin/pip.bak</code><br />
+②添加pip3的软链接，<code>ln -s /usr/local/bin/pip3 /usr/bin/pip</code></p>
+<h4 id="解决yum与python3的冲突"><a href="#解决yum与python3的冲突" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>解决yum与python3的冲突</h4>
+<p>由于设置了默认python为python3，会与不支持python3的yum产生冲突，需要将yum的默认指向的pytho修改为python2版本，修改步骤如下：<br />
+①修改配置1，<code>vi /usr/libexec/urlgrabber-ext-down</code>，将文件中<code>python</code>修改为对应的旧python2版本，然后保存；<br />
+<img src="../../../../../images/Linux-3.png" alt="修改配置1" /><span class="caption">◎ 修改配置1</span><br />
+②修改配置2，<code>vi /usr/bin/yum</code>，将文件中<code>python</code>修改为对应的旧python2版本，然后保存。<br />
+<img src="../../../../../images/Linux-4.png" alt="修改配置2" /><span class="caption">◎ 修改配置2</span><br />
+自此完成python3的安装与配置，可在centos上调用<code>python2</code>使用旧版本，调用<code>python</code>使用新版本。</p>
+<h3 id="定时任务-crontab"><a href="#定时任务-crontab" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>定时任务 crontab</h3>
+<p>Unix和类Unix操作系统在服务器中是十分常见的，实现预置任务和周期性执行对于管理服务器有着十分巨大的意义，因此掌握这类操作系统的定时任务对提高工作效率和减少人工干预有不少帮助。而这类操作系统中常用的一种定时周期性执行任务的工具即<code>crontab</code><sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">[10]</a></sup>，该词来源于希腊语<code>chronos(χρνο)</code>，原意是时间。通常，<code>crontab</code>储存的指令被守护进程激活，<code>crond</code>常常在后台运行，每一分钟检查是否有预定的作业需要执行。这类作业一般称为<code>cron jobs</code>。</p>
+<h4 id="介绍"><a href="#介绍" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>介绍</h4>
+<p>crontab文件包含送交cron守护进程的一系列作业和指令。每个用户可以拥有自己的crontab文件，同时操作系统保存一个针对整个系统的crontab文件，该文件通常存放于/etc或者/etc之下的子目录中，而这个文件只能由系统管理员来修改。crontab文件的每一行均遵守特定的格式，由空格或tab分隔为数个领域，每个领域可以放置单一或多个数值。<br />
+在Linux系统下的任务调度存在系统任务调度<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">[11]</a></sup>和用户任务调度<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">[12]</a></sup>，系统任务调度文件可见<code>/etc/crontab</code>文件，用户调度文件可见<code>/var/spool/cron/</code>目录下对应文件。</p>
+<h4 id="使用"><a href="#使用" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>使用</h4>
+<ul>
+<li>安装</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">yum install crontabs <span class="c1"># Centos</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li>操作</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">/sbin/service crond start   <span class="c1">#启动服务</span>
+
+/sbin/service crond stop    <span class="c1">#关闭服务</span>
+
+/sbin/service crond restart <span class="c1">#重启服务</span>
+
+/sbin/service crond reload  <span class="c1">#重新载入配置</span>
+
+service crond status        <span class="c1">#查看crontab服务状态</span>
+
+service crond start         <span class="c1">#手动启动crontab服务</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li>开机开启</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">ntsysv  <span class="c1">#查看crontab服务是否已设置为开机启动</span>
+
+chkconfig –level <span class="m">35</span> crond on <span class="c1">#加入开机自动启动</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h4 id="命令详解"><a href="#命令详解" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>命令详解</h4>
+<ol>
+<li>命令格式：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">crontab <span class="o">[</span>-u user<span class="o">]</span> file
+
+crontab <span class="o">[</span>-u user<span class="o">]</span> <span class="o">[</span> -e <span class="p">|</span> -l <span class="p">|</span> -r <span class="o">]</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ol start="2">
+<li>命令功能：<br />
+通过<code>crontab</code>命令，我们可以在固定的间隔时间执行指定的系统指令或<code>shell script</code>脚本。时间间隔的单位可以是分钟、小时、日、月、周及以上的任意组合，这个命令非常适合周期性的日志分析或数据备份等工作。</li>
+<li>命令参数：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">-u user <span class="c1">#用来设定某个用户的crontab服务，例如，“-u ixdba”表示设定ixdba用户的crontab服务，此参数一般有root用户来运行。</span>
+
+file    <span class="c1">#file是命令文件的名字,表示将file做为crontab的任务列表文件并载入crontab。如果在命令行中没有指定这个文件，crontab命令将接受标准输入（键盘）上键入的命令，并将它们载入crontab。</span>
+
+-e      <span class="c1">#编辑某个用户的crontab文件内容。如果不指定用户，则表示编辑当前用户的crontab文件。</span>
+
+-l      <span class="c1">#显示某个用户的crontab文件内容，如果不指定用户，则表示显示当前用户的crontab文件内容。</span>
+
+-r      <span class="c1">#从/var/spool/cron目录中删除某个用户的crontab文件，如果不指定用户，则默认删除当前用户的crontab文件。</span>
+
+-i      <span class="c1">#在删除用户的crontab文件时给确认提示。</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ol start="4">
+<li>常用方法：<br />
+①创建一个新的crontab文件：在考虑向cron进程提交一个crontab文件之前，首先要做的一件事情就是设置环境变量<code>EDITOR</code>，cron进程由此来确定使用哪个编辑器编辑crontab文件。编辑<code>HOME</code>目录下的<code>.profile</code>文件，在其中加入以下一行：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">EDITOR</span><span class="o">=</span>vi<span class="p">;</span> <span class="nb">export</span> EDITOR
+</code></pre></td></tr></table></div>
+</div>
+</div><p>然后保存并退出。创建一个名为<code>&lt;user&gt;cron</code>的文件，其中<code>&lt;user&gt;</code>是用户名，例如<code>lincron</code>。在该文件中加入以下内容：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># (put your own initials here)echo the date to the console every</span>
+
+<span class="c1"># 15minutes between 6pm and 6am</span>
+
+0,15,30,45 18-06 * * * /bin/echo ‘date’ &gt; /dev/console
+</code></pre></td></tr></table></div>
+</div>
+</div><p>保存并退出，确信前面5个域用空格分隔。在上面的例子中，系统将每隔<code>15</code>分钟向控制台输出一次当前时间。如果系统崩溃或挂起，从最后所显示的时间就可以一眼看出系统是什么时间停止工作的。在有些系统中，用tty1来表示控制台，可以根据实际情况对上面的例子进行相应的修改。为了提交你刚刚创建的crontab文件，可以把这个新创建的文件作为cron命令的参数：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">crontab lincron
+</code></pre></td></tr></table></div>
+</div>
+</div><p>现在该文件已经提交给cron进程，它将每隔<code>15</code>分钟运行一次。同时，新创建文件的一个副本已经被放在<code>/var/spool/cron</code>目录中，文件名就是用户名(即<code>lin</code>)。<br />
+②列出crontab文件：为了列出crontab文件，可以用：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">crontab -l
+
+0,15,30,45,18-06 * * * /bin/echo <span class="sb">`</span>date<span class="sb">`</span> &gt; dev/tty1
+</code></pre></td></tr></table></div>
+</div>
+</div><p>你将会看到和上面类似的内容，可以使用这种方法在<code>HOME</code>目录中对crontab文件做一备份：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">crontab -l &gt; /HOME/mycron
+</code></pre></td></tr></table></div>
+</div>
+</div><p>这样，一旦不小心误删了crontab文件，可以用上一节所讲述的方法迅速恢复。<br />
+③编辑crontab文件：如果希望添加、删除或编辑crontab文件中的条目，编辑crontab文件，相应的命令为：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">crontab -e
+</code></pre></td></tr></table></div>
+</div>
+</div><p>可以像使用<code>vi</code>编辑其他任何文件那样修改crontab文件并退出。如果修改了某些条目或添加了新的条目，那么在保存该文件时，<code>cron</code>会对其进行必要的完整性检查。如果其中的某个域出现了超出允许范围的值便会提示你。在编辑crontab文件时，没准会加入新的条目。例如，加入下面的一条：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># DT:delete core files,at 3.30am on 1,7,14,21,26,26 days of each month</span>
+
+<span class="m">30</span> <span class="m">3</span> 1,7,14,21,26 * * /bin/find -name “core’ -exec rm <span class="o">{}</span> <span class="se">\;</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>现在保存并退出。最好在crontab文件的每一个条目之上加入一条注释，这样就可以知道它的功能、运行时间，更为重要的是，知道这是哪位用户的作业。使用<code>crontab -l</code>命令列出它的全部信息：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">crontab -l
+
+<span class="c1"># (crondave installed on Tue May 4 13:07:43 1999)</span>
+
+<span class="c1"># DT:ech the date to the console every 30 minites</span>
+
+0,15,30,45 18-06 * * * /bin/echo <span class="sb">`</span>date<span class="sb">`</span> &gt; /dev/tty1
+
+<span class="c1"># DT:delete core files,at 3.30am on 1,7,14,21,26,26 days of each month</span>
+
+<span class="m">30</span> <span class="m">3</span> 1,7,14,21,26 * * /bin/find -name “core’ -exec rm <span class="o">{}</span> <span class="se">\;</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>④删除crontab文件：要删除crontab文件，可以用：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">crontab -r
+</code></pre></td></tr></table></div>
+</div>
+</div><p>⑤恢复丢失的crontab文件：如果不小心误删了crontab文件，假设<code>HOME</code>目录下还有一个备份，那么可以将其拷贝到<code>/var/spool/cron/&lt;username&gt;</code>，其中<code>&lt;username&gt;</code>是用户名。如果由于权限问题无法完成拷贝，可以用：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">crontab &lt;filename&gt;
+</code></pre></td></tr></table></div>
+</div>
+</div><p>其中，<code>&lt;filename&gt;</code>是你在<code>HOME</code>目录中副本的文件名，建议留存备份。</p>
+<h2 id="结束"><a href="#结束" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>结束</h2>
+<p>本着手册即查即用的原则，这篇博文写的十分简要，很少说明部分，直接贴出操作，本文将根据自身的经历持续补充。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://www.jianshu.com/p/59f759207862" target="_blank" rel="noopener">Linux思维导图整理</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://i.linuxtoy.org/files/pdf/fwunixref.pdf" target="_blank" rel="noopener">Unix/Linux 命令参考</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="https://www.jianshu.com/p/234b196791fb" target="_blank" rel="noopener">关于Linux软件源</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p><a href="https://www.runoob.com/linux/linux-vim.html" target="_blank" rel="noopener">Linux vi/vim</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><a href="https://www.timelate.com/archives/enable-ssh-root-login.html" target="_blank" rel="noopener">Ubuntu 18.04 使用root 帐号登录ssh并修改ssh端口号</a> <a href="#fnref:5" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p><a href="https://blog.csdn.net/boonya/article/details/77949438" target="_blank" rel="noopener">Ubuntu终端命令查看端口占用及关闭</a> <a href="#fnref:6" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p><a href="https://wzfou.com/vps-ceping-gongju/" target="_blank" rel="noopener">VPS主机性能和速度测试</a> <a href="#fnref:7" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p><a href="https://www.cnblogs.com/lomper/p/7053694.html" target="_blank" rel="noopener">SSH 远程关闭导致程序中断</a> <a href="#fnref:8" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:9" role="doc-endnote">
+<p><a href="https://blog.csdn.net/u013214212/article/details/81540840" target="_blank" rel="noopener">在新安装的Centos中安装python3.7 解决pip和yum问题</a> <a href="#fnref:9" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:10" role="doc-endnote">
+<p><a href="http://www.vpswe.com/linux/219.html" target="_blank" rel="noopener">crontab命令详解 含启动/重启/停止</a> <a href="#fnref:10" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:11" role="doc-endnote">
+<p>系统周期性所要执行的工作，比如写缓存数据到硬盘、日志清理等。 <a href="#fnref:11" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+<li id="fn:12" role="doc-endnote">
+<p>用户定期要执行的工作，比如用户数据备份、定时邮件提醒等。 <a href="#fnref:12" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+</ol>
+</div>
+
+            </div>
+
+        </article>
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        <div class="post-share">
+
+        
+
+        <div class="share-items">
+
+            
+                <div class="share-item twitter">
+                    
+                    <a href="https://twitter.com/share?url=https://example.com/posts/2020/06/16/linux%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/&amp;text=Linux%e4%bd%bf%e7%94%a8%e6%89%8b%e5%86%8c&amp;hashtags=%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f,&amp;via=" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item facebook">
+                    
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com/posts/2020/06/16/linux%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/&amp;hashtag=%23%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f" title="分享到「Facebook」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item linkedin">
+                    
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://example.com/posts/2020/06/16/linux%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/&amp;title=Linux%e4%bd%bf%e7%94%a8%e6%89%8b%e5%86%8c&amp;summary=Ubuntu%e4%bd%9c%e4%b8%baLinux%e7%b3%bb%e7%bb%9f%e5%88%86%e6%94%af%e4%b8%ad%e5%8d%81%e5%88%86%e6%b5%81%e8%a1%8c%e7%9a%84%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%ef%bc%8c2020%e5%b9%b4%e4%bb%a5%e5%89%8d%e5%b7%b2%e7%bb%8f%e5%8f%91%e5%b8%83%e6%9c%80%e6%96%b019.10%e7%89%88%e6%9c%ac%ef%bc%8c%e5%90%8c%e6%97%b6%e5%85%a8%e7%90%83%e5%b8%82%e5%9c%ba%e5%8d%a0%e6%9c%89%e7%8e%87%e4%b9%9f%e6%8e%92%e5%90%8d%e7%ac%ac3%ef%bc%88%e7%bb%9f%e8%ae%a1%e6%9d%a5%e6%ba%90%ef%bc%89%ef%bc%8c%e4%bd%9c%e4%b8%ba%e7%bb%8f%e5%85%b8%e7%9a%84Linux%e6%a1%8c%e9%9d%a2%e7%b3%bb%e7%bb%9f%ef%bc%8c%e7%9b%ae%e5%89%8d%e7%9a%84%e7%94%9f%e6%80%81%e6%98%af%e5%90%91%e5%a5%bd%e7%9a%84%ef%bc%8c%e8%80%8c%e4%b8%94%e5%8d%b3%e5%b0%86%e5%8f%91%e5%b8%83%e7%9a%84Ubuntu%2020.04%20LTS%e4%b9%9f%e8%ae%b8%e5%b0%86%e5%b8%a6%e6%9d%a5%e6%9b%b4%e5%a4%9a%e7%9a%84%e6%83%8a%e5%96%9c%ef%bc%8c%e5%af%b9%e4%ba%8e%e6%83%b3%e5%b0%9d%e8%af%95Linux%e7%b3%bb%e7%bb%9f%e7%9a%84%e6%96%b0%e6%89%8b%e8%80%8c%e8%a8%80%ef%bc%8c%e8%bf%99%e6%98%af%e6%8c%ba%e5%a5%bd%e7%9a%84%e4%b8%80%e4%b8%aa%e9%80%89%e6%8b%a9%e3%80%82%e7%8e%b0%e5%9c%a8Ubuntu%e7%9a%84%e4%b8%ad%e6%96%87%e6%94%af%e6%8c%81%e4%b9%9f%e5%be%88%e5%a5%bd%ef%bc%8c%e6%8e%a8%e5%87%ba%e4%ba%86%e4%b8%ad%e6%96%87%e7%89%88Ubuntu%e5%8d%b3%e4%bc%98%e9%ba%92%e9%ba%9f%ef%bc%88Ubuntu%20Kylin%ef%bc%89%e3%80%82%e6%9c%ac%e6%96%87%e2%80%a6%e2%80%a6&amp;source=%e6%9e%97%e6%b7%b1%e6%97%b6%e8%a7%81%e7%92%90" title="分享到「LinkedIn」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item telegram">
+                    
+                    <a href="https://t.me/share/url?url=https://example.com/posts/2020/06/16/linux%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/&amp;text=Linux%e4%bd%bf%e7%94%a8%e6%89%8b%e5%86%8c" title="分享到「Telegram」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item weibo">
+                    
+                    <a href="https://service.weibo.com/share/share.php?&amp;url=https://example.com/posts/2020/06/16/linux%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/&amp;title=Linux%e4%bd%bf%e7%94%a8%e6%89%8b%e5%86%8c&amp;pic=https://example.com/images/Linux-2.webp&amp;searchPic=false" title="分享到「新浪微博」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon weibo-icon"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item douban">
+                    
+                    <a href="https://www.douban.com/share/service?href=https://example.com/posts/2020/06/16/linux%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/&amp;name=Linux%e4%bd%bf%e7%94%a8%e6%89%8b%e5%86%8c&amp;text=Ubuntu%e4%bd%9c%e4%b8%baLinux%e7%b3%bb%e7%bb%9f%e5%88%86%e6%94%af%e4%b8%ad%e5%8d%81%e5%88%86%e6%b5%81%e8%a1%8c%e7%9a%84%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%ef%bc%8c2020%e5%b9%b4%e4%bb%a5%e5%89%8d%e5%b7%b2%e7%bb%8f%e5%8f%91%e5%b8%83%e6%9c%80%e6%96%b019.10%e7%89%88%e6%9c%ac%ef%bc%8c%e5%90%8c%e6%97%b6%e5%85%a8%e7%90%83%e5%b8%82%e5%9c%ba%e5%8d%a0%e6%9c%89%e7%8e%87%e4%b9%9f%e6%8e%92%e5%90%8d%e7%ac%ac3%ef%bc%88%e7%bb%9f%e8%ae%a1%e6%9d%a5%e6%ba%90%ef%bc%89%ef%bc%8c%e4%bd%9c%e4%b8%ba%e7%bb%8f%e5%85%b8%e7%9a%84Linux%e6%a1%8c%e9%9d%a2%e7%b3%bb%e7%bb%9f%ef%bc%8c%e7%9b%ae%e5%89%8d%e7%9a%84%e7%94%9f%e6%80%81%e6%98%af%e5%90%91%e5%a5%bd%e7%9a%84%ef%bc%8c%e8%80%8c%e4%b8%94%e5%8d%b3%e5%b0%86%e5%8f%91%e5%b8%83%e7%9a%84Ubuntu%2020.04%20LTS%e4%b9%9f%e8%ae%b8%e5%b0%86%e5%b8%a6%e6%9d%a5%e6%9b%b4%e5%a4%9a%e7%9a%84%e6%83%8a%e5%96%9c%ef%bc%8c%e5%af%b9%e4%ba%8e%e6%83%b3%e5%b0%9d%e8%af%95Linux%e7%b3%bb%e7%bb%9f%e7%9a%84%e6%96%b0%e6%89%8b%e8%80%8c%e8%a8%80%ef%bc%8c%e8%bf%99%e6%98%af%e6%8c%ba%e5%a5%bd%e7%9a%84%e4%b8%80%e4%b8%aa%e9%80%89%e6%8b%a9%e3%80%82%e7%8e%b0%e5%9c%a8Ubuntu%e7%9a%84%e4%b8%ad%e6%96%87%e6%94%af%e6%8c%81%e4%b9%9f%e5%be%88%e5%a5%bd%ef%bc%8c%e6%8e%a8%e5%87%ba%e4%ba%86%e4%b8%ad%e6%96%87%e7%89%88Ubuntu%e5%8d%b3%e4%bc%98%e9%ba%92%e9%ba%9f%ef%bc%88Ubuntu%20Kylin%ef%bc%89%e3%80%82%e6%9c%ac%e6%96%87%e2%80%a6%e2%80%a6" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item qq">
+                    
+                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://example.com/posts/2020/06/16/linux%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/&amp;title=Linux%e4%bd%bf%e7%94%a8%e6%89%8b%e5%86%8c&amp;summary=Ubuntu%e4%bd%9c%e4%b8%baLinux%e7%b3%bb%e7%bb%9f%e5%88%86%e6%94%af%e4%b8%ad%e5%8d%81%e5%88%86%e6%b5%81%e8%a1%8c%e7%9a%84%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%ef%bc%8c2020%e5%b9%b4%e4%bb%a5%e5%89%8d%e5%b7%b2%e7%bb%8f%e5%8f%91%e5%b8%83%e6%9c%80%e6%96%b019.10%e7%89%88%e6%9c%ac%ef%bc%8c%e5%90%8c%e6%97%b6%e5%85%a8%e7%90%83%e5%b8%82%e5%9c%ba%e5%8d%a0%e6%9c%89%e7%8e%87%e4%b9%9f%e6%8e%92%e5%90%8d%e7%ac%ac3%ef%bc%88%e7%bb%9f%e8%ae%a1%e6%9d%a5%e6%ba%90%ef%bc%89%ef%bc%8c%e4%bd%9c%e4%b8%ba%e7%bb%8f%e5%85%b8%e7%9a%84Linux%e6%a1%8c%e9%9d%a2%e7%b3%bb%e7%bb%9f%ef%bc%8c%e7%9b%ae%e5%89%8d%e7%9a%84%e7%94%9f%e6%80%81%e6%98%af%e5%90%91%e5%a5%bd%e7%9a%84%ef%bc%8c%e8%80%8c%e4%b8%94%e5%8d%b3%e5%b0%86%e5%8f%91%e5%b8%83%e7%9a%84Ubuntu%2020.04%20LTS%e4%b9%9f%e8%ae%b8%e5%b0%86%e5%b8%a6%e6%9d%a5%e6%9b%b4%e5%a4%9a%e7%9a%84%e6%83%8a%e5%96%9c%ef%bc%8c%e5%af%b9%e4%ba%8e%e6%83%b3%e5%b0%9d%e8%af%95Linux%e7%b3%bb%e7%bb%9f%e7%9a%84%e6%96%b0%e6%89%8b%e8%80%8c%e8%a8%80%ef%bc%8c%e8%bf%99%e6%98%af%e6%8c%ba%e5%a5%bd%e7%9a%84%e4%b8%80%e4%b8%aa%e9%80%89%e6%8b%a9%e3%80%82%e7%8e%b0%e5%9c%a8Ubuntu%e7%9a%84%e4%b8%ad%e6%96%87%e6%94%af%e6%8c%81%e4%b9%9f%e5%be%88%e5%a5%bd%ef%bc%8c%e6%8e%a8%e5%87%ba%e4%ba%86%e4%b8%ad%e6%96%87%e7%89%88Ubuntu%e5%8d%b3%e4%bc%98%e9%ba%92%e9%ba%9f%ef%bc%88Ubuntu%20Kylin%ef%bc%89%e3%80%82%e6%9c%ac%e6%96%87%e2%80%a6%e2%80%a6&amp;pics=https://example.com/images/Linux-2.webp&amp;site=%e6%9e%97%e6%b7%b1%e6%97%b6%e8%a7%81%e7%92%90" title="分享到「QQ」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item qzone">
+                    
+                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://example.com/posts/2020/06/16/linux%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/&amp;title=Linux%e4%bd%bf%e7%94%a8%e6%89%8b%e5%86%8c&amp;summary=Ubuntu%e4%bd%9c%e4%b8%baLinux%e7%b3%bb%e7%bb%9f%e5%88%86%e6%94%af%e4%b8%ad%e5%8d%81%e5%88%86%e6%b5%81%e8%a1%8c%e7%9a%84%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%ef%bc%8c2020%e5%b9%b4%e4%bb%a5%e5%89%8d%e5%b7%b2%e7%bb%8f%e5%8f%91%e5%b8%83%e6%9c%80%e6%96%b019.10%e7%89%88%e6%9c%ac%ef%bc%8c%e5%90%8c%e6%97%b6%e5%85%a8%e7%90%83%e5%b8%82%e5%9c%ba%e5%8d%a0%e6%9c%89%e7%8e%87%e4%b9%9f%e6%8e%92%e5%90%8d%e7%ac%ac3%ef%bc%88%e7%bb%9f%e8%ae%a1%e6%9d%a5%e6%ba%90%ef%bc%89%ef%bc%8c%e4%bd%9c%e4%b8%ba%e7%bb%8f%e5%85%b8%e7%9a%84Linux%e6%a1%8c%e9%9d%a2%e7%b3%bb%e7%bb%9f%ef%bc%8c%e7%9b%ae%e5%89%8d%e7%9a%84%e7%94%9f%e6%80%81%e6%98%af%e5%90%91%e5%a5%bd%e7%9a%84%ef%bc%8c%e8%80%8c%e4%b8%94%e5%8d%b3%e5%b0%86%e5%8f%91%e5%b8%83%e7%9a%84Ubuntu%2020.04%20LTS%e4%b9%9f%e8%ae%b8%e5%b0%86%e5%b8%a6%e6%9d%a5%e6%9b%b4%e5%a4%9a%e7%9a%84%e6%83%8a%e5%96%9c%ef%bc%8c%e5%af%b9%e4%ba%8e%e6%83%b3%e5%b0%9d%e8%af%95Linux%e7%b3%bb%e7%bb%9f%e7%9a%84%e6%96%b0%e6%89%8b%e8%80%8c%e8%a8%80%ef%bc%8c%e8%bf%99%e6%98%af%e6%8c%ba%e5%a5%bd%e7%9a%84%e4%b8%80%e4%b8%aa%e9%80%89%e6%8b%a9%e3%80%82%e7%8e%b0%e5%9c%a8Ubuntu%e7%9a%84%e4%b8%ad%e6%96%87%e6%94%af%e6%8c%81%e4%b9%9f%e5%be%88%e5%a5%bd%ef%bc%8c%e6%8e%a8%e5%87%ba%e4%ba%86%e4%b8%ad%e6%96%87%e7%89%88Ubuntu%e5%8d%b3%e4%bc%98%e9%ba%92%e9%ba%9f%ef%bc%88Ubuntu%20Kylin%ef%bc%89%e3%80%82%e6%9c%ac%e6%96%87%e2%80%a6%e2%80%a6&amp;pics=https://example.com/images/Linux-2.webp&amp;site=%e6%9e%97%e6%b7%b1%e6%97%b6%e8%a7%81%e7%92%90" title="分享到「QQ 空间」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item qrcode">
+                    <div class="qrcode-container" title="通过「二维码」"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qrcode-icon"><path d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64v-64zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z"/></svg><div id="qrcode-img"></div>
+                    </div>
+                    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+
+<script>
+    var typeNumber = 0;
+    var errorCorrectionLevel = 'L';
+    var qr = qrcode(typeNumber, errorCorrectionLevel);
+    qr.addData('https:\/\/example.com\/posts\/2020\/06\/16\/linux%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C\/');
+    qr.make();
+    document.getElementById('qrcode-img').innerHTML = qr.createImgTag();
+</script>
+
+                </div>
+            
+
+        </div>
+
+    </div>
+
+
+
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="../../../../../posts/2020/01/28/%E5%BE%AE%E8%BD%AF%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" class="related-link">微软系统使用手册</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="../../../../../posts/2019/10/12/latex%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" class="related-link">LaTeX-安装教程</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="../../../../../tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>操作系统</a>
+                
+            
+        </div>
+    
+
+
+
+        
+
+
+        
+
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="../../../../../posts/2020/06/18/%E5%AE%9A%E6%97%B6%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E5%8A%A8%E6%80%81%E5%85%AC%E7%BD%91ip/" rel="prev">&lt; 定时自动获取动态公网IP</a>
+                </li>
+            
+            
+                <li class="post-nav-next">
+                    <a href="../../../../../posts/2020/03/24/%E7%8E%A9%E8%BD%AC%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BA%8C/" rel="next">玩转树莓派（二）配置V2ray客户端及透明网关 &gt;</a>
+                </li>
+            
+        </ul>
+    
+
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2019–2020&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;L1n</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div>
+
+            
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true,
+        header: '[data-scroll-header]'
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module" defer></script>
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

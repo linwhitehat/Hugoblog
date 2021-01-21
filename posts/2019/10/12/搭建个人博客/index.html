@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.74.2" /><meta name="theme-color" content="#fff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title>搭建个人博客(Hexo&#43;Next&#43;Github） | 林深时见璐</title>
+
+    <link rel="stylesheet" href="../../../../../css/meme.min.7e2214024e94b01ef6b65dc39787357a299877ef23be0fd926b0369eb09fc7e9.css" integrity="sha256-fiIUAk6UsB72tl3Dl4c1eimYd&#43;8jvg/ZJrA2nrCfx&#43;k=" />
+
+    
+    
+        <script src="../../../../../js/meme.min.c5d0fc41b615fc50cc2299b86c88c6993fc8c3cb69a8eab60730ee9707f795ad.js" integrity="sha256-xdD8QbYV/FDMIpm4bIjGmT/Iw8tpqOq2BzDulwf3la0="></script>
+
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="L1n" /><meta name="description" content="在经过多个教程摸索和尝试后，发现手把手有时候挺坑人的，毕竟经验还是要自己攒，不然没踩的坑迟早要踩到，最终我的个人博客林深时见璐搭建完成，这篇教程会从本地博客建立到实现美观的网络博客进行记录分享，这篇博客也就会随着本博客的每一次升级完善而补充，希望能给想自建博客的朋友们提供帮助。 最初的诞生 我采用的搭建博客的方式是使用 GitHub Pages &#43; Hexo 的方式，这个应该是我摸索之后认为的对新手最友好也最优质的方式，只需要投入时间……" />
+
+    <link rel="shortcut icon" href="../../../../../favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="../../../../../icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../../icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="林深时见璐" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="林深时见璐" />
+    <meta name="msapplication-starturl" content="../../../../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../../../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="../../../../../manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://example.com/posts/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" />
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2019-10-12T00:00:00+00:00",
+        "dateModified": "2020-07-22T20:16:36+08:00",
+        "url": "https://example.com/posts/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/",
+        "headline": "搭建个人博客(Hexo+Next+Github）",
+        "description": "在经过多个教程摸索和尝试后，发现手把手有时候挺坑人的，毕竟经验还是要自己攒，不然没踩的坑迟早要踩到，最终我的个人博客林深时见璐搭建完成，这篇教程会从本地博客建立到实现美观的网络博客进行记录分享，这篇博客也就会随着本博客的每一次升级完善而补充，希望能给想自建博客的朋友们提供帮助。 最初的诞生 我采用的搭建博客的方式是使用 GitHub Pages + Hexo 的方式，这个应该是我摸索之后认为的对新手最友好也最优质的方式，只需要投入时间……",
+        "inLanguage" : "zh-CN",
+        "articleSection": "posts",
+        "wordCount":  2185 ,
+        "image": ["https://example.com/images/blog-1.png","https://example.com/images/blog-2.webp","https://example.com/images/blog-3.webp","https://example.com/images/blog-4.webp","https://example.com/images/blog-5.webp","https://example.com/images/blog-6.webp","https://example.com/images/blog-7.webp","https://example.com/images/blog-8.webp","https://example.com/images/blog-9.webp","https://example.com/images/blog-10.webp"],
+        "author": {
+            "@type": "Person",
+            "description": "Work-Life-Balance",
+            "email": "eric_lin_cn@outlook.com",
+            "image": "https://example.com/icons/apple-touch-icon.png",
+            "url": "https://linwhitehat.github.io",
+            "name": "L1n"
+        },
+        "license": "本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。",
+        "publisher": {
+            "@type": "Organization",
+            "name": "林深时见璐",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/icons/apple-touch-icon.png"
+            },
+            "url": "https://example.com/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://example.com/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+
+
+
+    
+
+
+
+<meta property="og:title" content="搭建个人博客(Hexo&#43;Next&#43;Github）" />
+<meta property="og:description" content="在经过多个教程摸索和尝试后，发现手把手有时候挺坑人的，毕竟经验还是要自己攒，不然没踩的坑迟早要踩到，最终我的个人博客林深时见璐搭建完成，这篇教程会从本地博客建立到实现美观的网络博客进行记录分享，这篇博客也就会随着本博客的每一次升级完善而补充，希望能给想自建博客的朋友们提供帮助。 最初的诞生 我采用的搭建博客的方式是使用 GitHub Pages &#43; Hexo 的方式，这个应该是我摸索之后认为的对新手最友好也最优质的方式，只需要投入时间……" />
+<meta property="og:url" content="https://example.com/posts/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" />
+<meta property="og:site_name" content="林深时见璐" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://example.com/images/blog-1.png" />
+<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2019-10-12T00:00:00&#43;00:00" />
+    <meta property="article:modified_time" content="2020-07-22T20:16:36&#43;08:00" />
+    
+    <meta property="article:section" content="posts" />
+
+
+
+    
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma&#43;Shan&#43;Zheng&amp;text=L1n%27sBlog%e6%9e%97%e6%b7%b1%e6%97%b6%e8%a7%81%e7%92%90&amp;display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma&#43;Shan&#43;Zheng&amp;text=L1n%27sBlog%e6%9e%97%e6%b7%b1%e6%97%b6%e8%a7%81%e7%92%90&amp;display=swap" /></noscript>
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header" data-scroll-header>
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="../../../../../" class="brand">林深时见璐</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item active"><a href="../../../../../posts/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon archives"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">归档</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="../../../../../categories/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon categories"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg><span class="menu-item-name">分类</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="../../../../../tags/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon tags"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg><span class="menu-item-name">标签</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="../../../../../about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon about"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="../../../../../blogroll/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="icon friends"><path d="M384 312.7c-55.1 136.7-187.1 54-187.1 54-40.5 81.8-107.4 134.4-184.6 134.7-16.1 0-16.6-24.4 0-24.4 64.4-.3 120.5-42.7 157.2-110.1-41.1 15.9-118.6 27.9-161.6-82.2 109-44.9 159.1 11.2 178.3 45.5 9.9-24.4 17-50.9 21.6-79.7 0 0-139.7 21.9-149.5-98.1 119.1-47.9 152.6 76.7 152.6 76.7 1.6-16.7 3.3-52.6 3.3-53.4 0 0-106.3-73.7-38.1-165.2 124.6 43 61.4 162.4 61.4 162.4.5 1.6.5 23.8 0 33.4 0 0 45.2-89 136.4-57.5-4.2 134-141.9 106.4-141.9 106.4-4.4 27.4-11.2 53.4-20 77.5 0 0 83-91.8 172-20z"/></svg><span class="menu-item-name">友链</span></a>
+                </li>
+            
+        
+            
+                
+                    
+                    
+                        <li class="menu-item">
+                            <a id="theme-switcher" href="#"><span class="icon theme-icon-light">🌞</span><span class="icon theme-icon-dark">🌙</span></a>
+                        </li>
+                    
+                
+            
+        
+            
+                
+                    
+                        
+                        
+                    
+                
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post" data-align="justify" data-type="posts" data-layout="post" data-toc-num="true">
+
+            <h1 class="post-title">搭建个人博客(Hexo+Next+Github）</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2019-10-12T00:00:00&#43;00:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2019-10-12</time>
+    
+    
+        
+        <time datetime="2020-07-22T20:16:36&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020-07-22</time>
+    
+    
+    
+        
+        
+            
+            
+                
+                
+                
+                
+                    
+                    
+                    
+                
+            
+            
+            
+        
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;2185</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;5&nbsp;分钟</span>
+    
+    
+    
+</div>
+
+            
+
+            <div class="post-body">
+              <p style="text-indent:0"><span class="drop-cap">在</span>经过多个教程摸索和尝试后，发现手把手有时候挺坑人的，毕竟经验还是要自己攒，不然没踩的坑迟早要踩到，最终我的个人博客<a href="https://linwhitehat.github.io/" target="_blank" rel="noopener">林深时见璐</a>搭建完成，这篇教程会从本地博客建立到实现美观的网络博客进行记录分享，这篇博客也就会随着本博客的每一次升级完善而补充，希望能给想自建博客的朋友们提供帮助。</p>
+<!-- more -->
+<h2 id="最初的诞生"><a href="#最初的诞生" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>最初的诞生</h2>
+<p>我采用的搭建博客的方式是使用 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> + <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a> 的方式，这个应该是我摸索之后认为的对新手最友好也最优质的方式，只需要投入时间学习和运营，就能拥有美观的个人博客。以下的1 - 3小点是博客的雏形构建<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">[1]</a></sup>。</p>
+<h3 id="注册github账号"><a href="#注册github账号" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>注册Github账号</h3>
+<p>要使用 GitHub Pages，首先你要注册一个<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>账号。</p>
+<p><img src="../../../../../images/blog-1.png" alt="GitHub注册页" /><span class="caption">◎ GitHub注册页</span></p>
+<h3 id="安装必备软件"><a href="#安装必备软件" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>安装必备软件</h3>
+<ol>
+<li>
+<p>安装<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git</a>客户端</p>
+</li>
+<li>
+<p>安装<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></p>
+</li>
+</ol>
+<h3 id="搭建博客"><a href="#搭建博客" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>搭建博客</h3>
+<ol>
+<li>新建博客<br />
+配置GitHub，步骤如下:</li>
+</ol>
+<ul>
+<li>登录GitHub后新建项目（new repository），项目名由两部分组成即GitHub账号名和固定后缀<code>.github.io</code>，比如我的项目就是<code>linwhitehat.github.io</code>，填写完点击创建项目（create repository）。</li>
+<li>配置GitHub SSH密钥，本地打开git bash，输入<code>ssh-keygen -t rsa -C &quot;your's emaill address&quot; </code>，其中your's email address换成GitHub账号的邮箱地址，第一次点击回车键（Enter）会显示存储位置，第二次点击回车键会显示输入密钥，按照要求输入密钥两次(输入过程是看不到密钥的)，之后在第一次显示的存储位置打开文件id_rsa.pub，复制文件内所有内容，在GitHub中点击头像可看的setting选项，在setting选项中可看到SSH and GPG keys选项，点击new SSH，然后输入title（方便密钥管理的名字），将刚才复制的内容粘贴到key中。</li>
+<li>创建本地仓库，在本地选择不包含中文的文件路径，新建一个文件夹，进入文件夹并点击右键选择git bash，输入以下命令进行设置：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"> git init
+ git config --global user.name <span class="s2">&#34;Your&#39;s name&#34;</span>
+ git config --global user.email <span class="s2">&#34;Your&#39;s email address&#34;</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>其中<code>Your's name</code>和<code>Your's email address</code>替换为GitHub账户名和对应邮箱地址。</p>
+<ul>
+<li>安装Hexo，按照之前方式进入git bash终端，输入<code>node</code>检测Node.js是否安装成功，若出现<code>&gt;</code>则表示正常，退出node模式，输入以下命令安装Hexo：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"> npm install -g hexo-cli
+ hexo version
+</code></pre></td></tr></table></div>
+</div>
+</div><p>看到输出版本号等信息表示安装Hexo成功，在当前新建的文件夹下新建一个hexo文件夹，在hexo文件夹中进入git bash，输入以下命令配置hexo，完成之后，在浏览器输入<code>http://localhost:4000</code>，正常则可看到初始化的博客，到此便完成本地博客的建立。</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"> hexo init
+ npm install
+ hexo g
+ hexo s
+</code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li>配置Hexo到GitHub，在hexo文件夹下存在一个配置文件<code>_config.yml</code>，打开后可看到文件最后部分为：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w"> </span><span class="k">deploy</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w">
+</span></code></pre></td></tr></table></div>
+</div>
+</div><p>将其修改为以下内容，其中<code>yourname</code>为GitHub账号名：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w"> </span><span class="k">deploy</span><span class="p">:</span><span class="w">  
+</span><span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span>git<span class="w">
+</span><span class="w">  </span><span class="k">repository</span><span class="p">:</span><span class="w"> </span>http<span class="p">:</span>//github.com/yourname/yourname.github.io.git<span class="w">
+</span><span class="w">  </span><span class="k">branch</span><span class="p">:</span><span class="w"> </span>master<span class="w">
+</span></code></pre></td></tr></table></div>
+</div>
+</div><p>保存后，在当前文件夹打开git bash并输入：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"> hexo g
+ hexo d
+</code></pre></td></tr></table></div>
+</div>
+</div><p>若出现错误显示<code>ERROR Deployer not found: git</code>，则输入以下命令：</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"> npm install hexo-deployer-git --save
+ hexo g
+ hexo d
+</code></pre></td></tr></table></div>
+</div>
+</div><p>若弹出填写GitHub账号用户名和密码则正常填写，完成之后在浏览器输入<code>https://yourname.github.io</code>，yourname替换为GitHub账户名，即可通过互联网访问博客。</p>
+<ul>
+<li>如果不想自己新建，可以使用现有的他人博客项目进行改建，见<a href="#Section2">第2小节</a>。</li>
+</ul>
+<ol start="2">
+<li><span id="Section2">使用已有的博客模板</span></li>
+</ol>
+<ul>
+<li>注册完成后搜索 <code>linwhitehat.github.io</code> 进入<a href="https://github.com/linwhitehat/linwhitehat.github.io" target="_blank" rel="noopener">我的仓库</a></li>
+</ul>
+<p><img src="../../../../../images/blog-2.webp" alt="GitHub项目" /><span class="caption">◎ GitHub项目</span></p>
+<p>点击右上角的 <strong>Fork</strong> 将我的仓库拉倒你的账号下</p>
+<p>稍等一下，点击刷新，你会看到<strong>Fork</strong>了成功的页面</p>
+<p><img src="../../../../../images/blog-3.webp" alt="Fork项目" /><span class="caption">◎ Fork项目</span></p>
+<ul>
+<li>修改仓库名</li>
+</ul>
+<p>点击<strong>settings</strong>进入设置</p>
+<p><img src="../../../../../images/blog-4.webp" alt="项目设置修改" /><span class="caption">◎ 项目设置修改</span></p>
+  <p id = "Rename"></p>
+<p>修改仓库名为 <code>你的Github账号名.github.io</code>，然后 Rename</p>
+<p><img src="../../../../../images/blog-5.webp" alt="修改项目名" /><span class="caption">◎ 修改项目名</span></p>
+<p>这时你在在浏览器中输入 <code>你的Github账号名.github.io</code> 例如:<code>linwhitehat.github.io</code></p>
+<p>你将会看到如下界面</p>
+<p><img src="../../../../../images/blog-6.webp" alt="博客首页" /><span class="caption">◎ 博客首页</span></p>
+<p>说明已经成功一半了😀当然，还需要修改博客的配置才能变成你的博客。</p>
+<p>若是出现</p>
+<p><img src="../../../../../images/blog-7.webp" alt="访问出错" /><span class="caption">◎ 访问出错</span></p>
+<p>则需要 <a href="#Rename">检查一下你的仓库名是否正确</a></p>
+<h3 id="修改博客配置"><a href="#修改博客配置" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>修改博客配置</h3>
+<p>来到你的仓库，找到<code>_config.yml</code>文件,这是网站的全局配置文件。</p>
+<p><img src="../../../../../images/blog-8.webp" alt="博客配置文件" /><span class="caption">◎ 博客配置文件</span></p>
+<p>点击修改</p>
+<p><img src="../../../../../images/blog-9.webp" alt="修改配置文件" /><span class="caption">◎ 修改配置文件</span></p>
+<p>然后编辑<code>_config.yml</code>的内容</p>
+<p><img src="../../../../../images/blog-10.webp" alt="配置文件内容修改" /><span class="caption">◎ 配置文件内容修改</span></p>
+<p>接下来我们来详细说说以下配置文件的内容：</p>
+<h3 id="基础设置说明"><a href="#基础设置说明" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>基础设置说明</h3>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">  <span class="c1"># Site settings</span>
+  title: Your Blog    				    <span class="c1">#你博客的标题</span>
+  SEOTitle: 你的博客 <span class="p">|</span> Your Blog    	    <span class="c1">#显示在浏览器上搜索的时候显示的标题</span>
+  header-img: img/post-bg-rwd.jpg  	    <span class="c1">#显示在首页的背景图片</span>
+  email: You@gmail.com	
+  description: <span class="s2">&#34;You Blog&#34;</span>  			    <span class="c1">#网站介绍</span>
+  keyword: <span class="s2">&#34;L1n, L1n Blog&#34;</span> <span class="c1">#关键词</span>
+  url: <span class="s2">&#34;https://linwhitehat.github.io&#34;</span>  <span class="c1"># 这个就是填写你的博客地址</span>
+  baseurl: <span class="s2">&#34;&#34;</span>                           <span class="c1"># 这个我们不用填写</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>至此，一个初具形态的博客便生成了。</p>
+<h2 id="进阶"><a href="#进阶" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>进阶</h2>
+<ol>
+<li>本文中新建仓库建立博客的方式，在本地建立仓库后，又再新建一个hexo文件，且将hexo配置托管到GitHub之后，GitHub项目便被hexo文件夹下的<code>.deploy_git</code>覆盖，之后修改博客维护项目只需要在hexo文件夹下的git bash进行hexo处理即可。</li>
+<li>本文博客搭建的目录结构如下，相关博客搭建及<a href="https://linwhitehat.github.io/Blog/2020/01/30/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html" target="_blank" rel="noopener">优化教程</a>中涉及的路径参照此目录树：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-diff" data-lang="diff"># 博客根目录
+|-- hexo
+|   |-- _config.yml
+|   |-- node_modules
+|   |-- public
+|   |-- scaffolds
+|   |-- source
+|   `-- themes
+
+# 主题根目录
+|-- themes
+  `-- next
+    |-- LICENSE.md
+    |-- README.md
+    |-- _config.yml
+    |-- docs
+    |-- languages
+    |-- layout
+    |-- scripts
+    `-- source
+
+</code></pre></td></tr></table></div>
+</div>
+</div><ol start="3">
+<li>Hexo卸载方式，在git bash执行以下命令：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm uninstall hexo-cli -g
+npm uninstall hexo -g
+</code></pre></td></tr></table></div>
+</div>
+</div><p>博客相应的文件目录需要手动删除。</p>
+<h2 id="结束"><a href="#结束" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>结束</h2>
+<p>博客搭建基本完成，但是博客中有很多地方可以自定义设计，这也是自建博客的初衷，熟悉Hexo和Next.Mist的配置后，会逐步优化博客样式。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://www.jianshu.com/p/956c44c87fb1" target="_blank" rel="noopener">博客雏形安装</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
+</li>
+</ol>
+</div>
+
+            </div>
+
+        </article>
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        <div class="post-share">
+
+        
+
+        <div class="share-items">
+
+            
+                <div class="share-item twitter">
+                    
+                    <a href="https://twitter.com/share?url=https://example.com/posts/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&amp;text=%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%28Hexo&#43;Next&#43;Github%ef%bc%89&amp;hashtags=Hexo,Next,GitHub,&amp;via=" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item facebook">
+                    
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com/posts/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&amp;hashtag=%23Hexo" title="分享到「Facebook」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item linkedin">
+                    
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://example.com/posts/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&amp;title=%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%28Hexo&#43;Next&#43;Github%ef%bc%89&amp;summary=%e5%9c%a8%e7%bb%8f%e8%bf%87%e5%a4%9a%e4%b8%aa%e6%95%99%e7%a8%8b%e6%91%b8%e7%b4%a2%e5%92%8c%e5%b0%9d%e8%af%95%e5%90%8e%ef%bc%8c%e5%8f%91%e7%8e%b0%e6%89%8b%e6%8a%8a%e6%89%8b%e6%9c%89%e6%97%b6%e5%80%99%e6%8c%ba%e5%9d%91%e4%ba%ba%e7%9a%84%ef%bc%8c%e6%af%95%e7%ab%9f%e7%bb%8f%e9%aa%8c%e8%bf%98%e6%98%af%e8%a6%81%e8%87%aa%e5%b7%b1%e6%94%92%ef%bc%8c%e4%b8%8d%e7%84%b6%e6%b2%a1%e8%b8%a9%e7%9a%84%e5%9d%91%e8%bf%9f%e6%97%a9%e8%a6%81%e8%b8%a9%e5%88%b0%ef%bc%8c%e6%9c%80%e7%bb%88%e6%88%91%e7%9a%84%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e6%9e%97%e6%b7%b1%e6%97%b6%e8%a7%81%e7%92%90%e6%90%ad%e5%bb%ba%e5%ae%8c%e6%88%90%ef%bc%8c%e8%bf%99%e7%af%87%e6%95%99%e7%a8%8b%e4%bc%9a%e4%bb%8e%e6%9c%ac%e5%9c%b0%e5%8d%9a%e5%ae%a2%e5%bb%ba%e7%ab%8b%e5%88%b0%e5%ae%9e%e7%8e%b0%e7%be%8e%e8%a7%82%e7%9a%84%e7%bd%91%e7%bb%9c%e5%8d%9a%e5%ae%a2%e8%bf%9b%e8%a1%8c%e8%ae%b0%e5%bd%95%e5%88%86%e4%ba%ab%ef%bc%8c%e8%bf%99%e7%af%87%e5%8d%9a%e5%ae%a2%e4%b9%9f%e5%b0%b1%e4%bc%9a%e9%9a%8f%e7%9d%80%e6%9c%ac%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%af%8f%e4%b8%80%e6%ac%a1%e5%8d%87%e7%ba%a7%e5%ae%8c%e5%96%84%e8%80%8c%e8%a1%a5%e5%85%85%ef%bc%8c%e5%b8%8c%e6%9c%9b%e8%83%bd%e7%bb%99%e6%83%b3%e8%87%aa%e5%bb%ba%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%9c%8b%e5%8f%8b%e4%bb%ac%e6%8f%90%e4%be%9b%e5%b8%ae%e5%8a%a9%e3%80%82%20%e6%9c%80%e5%88%9d%e7%9a%84%e8%af%9e%e7%94%9f%20%e6%88%91%e9%87%87%e7%94%a8%e7%9a%84%e6%90%ad%e5%bb%ba%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%96%b9%e5%bc%8f%e6%98%af%e4%bd%bf%e7%94%a8%20GitHub%20Pages%20&#43;%20Hexo%20%e7%9a%84%e6%96%b9%e5%bc%8f%ef%bc%8c%e8%bf%99%e4%b8%aa%e5%ba%94%e8%af%a5%e6%98%af%e6%88%91%e6%91%b8%e7%b4%a2%e4%b9%8b%e5%90%8e%e8%ae%a4%e4%b8%ba%e7%9a%84%e5%af%b9%e6%96%b0%e6%89%8b%e6%9c%80%e5%8f%8b%e5%a5%bd%e4%b9%9f%e6%9c%80%e4%bc%98%e8%b4%a8%e7%9a%84%e6%96%b9%e5%bc%8f%ef%bc%8c%e5%8f%aa%e9%9c%80%e8%a6%81%e6%8a%95%e5%85%a5%e6%97%b6%e9%97%b4%e2%80%a6%e2%80%a6&amp;source=%e6%9e%97%e6%b7%b1%e6%97%b6%e8%a7%81%e7%92%90" title="分享到「LinkedIn」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item telegram">
+                    
+                    <a href="https://t.me/share/url?url=https://example.com/posts/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&amp;text=%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%28Hexo&#43;Next&#43;Github%ef%bc%89" title="分享到「Telegram」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item weibo">
+                    
+                    <a href="https://service.weibo.com/share/share.php?&amp;url=https://example.com/posts/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&amp;title=%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%28Hexo&#43;Next&#43;Github%ef%bc%89&amp;pic=https://example.com/images/blog-1.png&amp;searchPic=false" title="分享到「新浪微博」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon weibo-icon"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item douban">
+                    
+                    <a href="https://www.douban.com/share/service?href=https://example.com/posts/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&amp;name=%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%28Hexo&#43;Next&#43;Github%ef%bc%89&amp;text=%e5%9c%a8%e7%bb%8f%e8%bf%87%e5%a4%9a%e4%b8%aa%e6%95%99%e7%a8%8b%e6%91%b8%e7%b4%a2%e5%92%8c%e5%b0%9d%e8%af%95%e5%90%8e%ef%bc%8c%e5%8f%91%e7%8e%b0%e6%89%8b%e6%8a%8a%e6%89%8b%e6%9c%89%e6%97%b6%e5%80%99%e6%8c%ba%e5%9d%91%e4%ba%ba%e7%9a%84%ef%bc%8c%e6%af%95%e7%ab%9f%e7%bb%8f%e9%aa%8c%e8%bf%98%e6%98%af%e8%a6%81%e8%87%aa%e5%b7%b1%e6%94%92%ef%bc%8c%e4%b8%8d%e7%84%b6%e6%b2%a1%e8%b8%a9%e7%9a%84%e5%9d%91%e8%bf%9f%e6%97%a9%e8%a6%81%e8%b8%a9%e5%88%b0%ef%bc%8c%e6%9c%80%e7%bb%88%e6%88%91%e7%9a%84%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e6%9e%97%e6%b7%b1%e6%97%b6%e8%a7%81%e7%92%90%e6%90%ad%e5%bb%ba%e5%ae%8c%e6%88%90%ef%bc%8c%e8%bf%99%e7%af%87%e6%95%99%e7%a8%8b%e4%bc%9a%e4%bb%8e%e6%9c%ac%e5%9c%b0%e5%8d%9a%e5%ae%a2%e5%bb%ba%e7%ab%8b%e5%88%b0%e5%ae%9e%e7%8e%b0%e7%be%8e%e8%a7%82%e7%9a%84%e7%bd%91%e7%bb%9c%e5%8d%9a%e5%ae%a2%e8%bf%9b%e8%a1%8c%e8%ae%b0%e5%bd%95%e5%88%86%e4%ba%ab%ef%bc%8c%e8%bf%99%e7%af%87%e5%8d%9a%e5%ae%a2%e4%b9%9f%e5%b0%b1%e4%bc%9a%e9%9a%8f%e7%9d%80%e6%9c%ac%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%af%8f%e4%b8%80%e6%ac%a1%e5%8d%87%e7%ba%a7%e5%ae%8c%e5%96%84%e8%80%8c%e8%a1%a5%e5%85%85%ef%bc%8c%e5%b8%8c%e6%9c%9b%e8%83%bd%e7%bb%99%e6%83%b3%e8%87%aa%e5%bb%ba%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%9c%8b%e5%8f%8b%e4%bb%ac%e6%8f%90%e4%be%9b%e5%b8%ae%e5%8a%a9%e3%80%82%20%e6%9c%80%e5%88%9d%e7%9a%84%e8%af%9e%e7%94%9f%20%e6%88%91%e9%87%87%e7%94%a8%e7%9a%84%e6%90%ad%e5%bb%ba%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%96%b9%e5%bc%8f%e6%98%af%e4%bd%bf%e7%94%a8%20GitHub%20Pages%20&#43;%20Hexo%20%e7%9a%84%e6%96%b9%e5%bc%8f%ef%bc%8c%e8%bf%99%e4%b8%aa%e5%ba%94%e8%af%a5%e6%98%af%e6%88%91%e6%91%b8%e7%b4%a2%e4%b9%8b%e5%90%8e%e8%ae%a4%e4%b8%ba%e7%9a%84%e5%af%b9%e6%96%b0%e6%89%8b%e6%9c%80%e5%8f%8b%e5%a5%bd%e4%b9%9f%e6%9c%80%e4%bc%98%e8%b4%a8%e7%9a%84%e6%96%b9%e5%bc%8f%ef%bc%8c%e5%8f%aa%e9%9c%80%e8%a6%81%e6%8a%95%e5%85%a5%e6%97%b6%e9%97%b4%e2%80%a6%e2%80%a6" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item qq">
+                    
+                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://example.com/posts/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&amp;title=%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%28Hexo&#43;Next&#43;Github%ef%bc%89&amp;summary=%e5%9c%a8%e7%bb%8f%e8%bf%87%e5%a4%9a%e4%b8%aa%e6%95%99%e7%a8%8b%e6%91%b8%e7%b4%a2%e5%92%8c%e5%b0%9d%e8%af%95%e5%90%8e%ef%bc%8c%e5%8f%91%e7%8e%b0%e6%89%8b%e6%8a%8a%e6%89%8b%e6%9c%89%e6%97%b6%e5%80%99%e6%8c%ba%e5%9d%91%e4%ba%ba%e7%9a%84%ef%bc%8c%e6%af%95%e7%ab%9f%e7%bb%8f%e9%aa%8c%e8%bf%98%e6%98%af%e8%a6%81%e8%87%aa%e5%b7%b1%e6%94%92%ef%bc%8c%e4%b8%8d%e7%84%b6%e6%b2%a1%e8%b8%a9%e7%9a%84%e5%9d%91%e8%bf%9f%e6%97%a9%e8%a6%81%e8%b8%a9%e5%88%b0%ef%bc%8c%e6%9c%80%e7%bb%88%e6%88%91%e7%9a%84%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e6%9e%97%e6%b7%b1%e6%97%b6%e8%a7%81%e7%92%90%e6%90%ad%e5%bb%ba%e5%ae%8c%e6%88%90%ef%bc%8c%e8%bf%99%e7%af%87%e6%95%99%e7%a8%8b%e4%bc%9a%e4%bb%8e%e6%9c%ac%e5%9c%b0%e5%8d%9a%e5%ae%a2%e5%bb%ba%e7%ab%8b%e5%88%b0%e5%ae%9e%e7%8e%b0%e7%be%8e%e8%a7%82%e7%9a%84%e7%bd%91%e7%bb%9c%e5%8d%9a%e5%ae%a2%e8%bf%9b%e8%a1%8c%e8%ae%b0%e5%bd%95%e5%88%86%e4%ba%ab%ef%bc%8c%e8%bf%99%e7%af%87%e5%8d%9a%e5%ae%a2%e4%b9%9f%e5%b0%b1%e4%bc%9a%e9%9a%8f%e7%9d%80%e6%9c%ac%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%af%8f%e4%b8%80%e6%ac%a1%e5%8d%87%e7%ba%a7%e5%ae%8c%e5%96%84%e8%80%8c%e8%a1%a5%e5%85%85%ef%bc%8c%e5%b8%8c%e6%9c%9b%e8%83%bd%e7%bb%99%e6%83%b3%e8%87%aa%e5%bb%ba%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%9c%8b%e5%8f%8b%e4%bb%ac%e6%8f%90%e4%be%9b%e5%b8%ae%e5%8a%a9%e3%80%82%20%e6%9c%80%e5%88%9d%e7%9a%84%e8%af%9e%e7%94%9f%20%e6%88%91%e9%87%87%e7%94%a8%e7%9a%84%e6%90%ad%e5%bb%ba%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%96%b9%e5%bc%8f%e6%98%af%e4%bd%bf%e7%94%a8%20GitHub%20Pages%20&#43;%20Hexo%20%e7%9a%84%e6%96%b9%e5%bc%8f%ef%bc%8c%e8%bf%99%e4%b8%aa%e5%ba%94%e8%af%a5%e6%98%af%e6%88%91%e6%91%b8%e7%b4%a2%e4%b9%8b%e5%90%8e%e8%ae%a4%e4%b8%ba%e7%9a%84%e5%af%b9%e6%96%b0%e6%89%8b%e6%9c%80%e5%8f%8b%e5%a5%bd%e4%b9%9f%e6%9c%80%e4%bc%98%e8%b4%a8%e7%9a%84%e6%96%b9%e5%bc%8f%ef%bc%8c%e5%8f%aa%e9%9c%80%e8%a6%81%e6%8a%95%e5%85%a5%e6%97%b6%e9%97%b4%e2%80%a6%e2%80%a6&amp;pics=https://example.com/images/blog-1.png&amp;site=%e6%9e%97%e6%b7%b1%e6%97%b6%e8%a7%81%e7%92%90" title="分享到「QQ」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item qzone">
+                    
+                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://example.com/posts/2019/10/12/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&amp;title=%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%28Hexo&#43;Next&#43;Github%ef%bc%89&amp;summary=%e5%9c%a8%e7%bb%8f%e8%bf%87%e5%a4%9a%e4%b8%aa%e6%95%99%e7%a8%8b%e6%91%b8%e7%b4%a2%e5%92%8c%e5%b0%9d%e8%af%95%e5%90%8e%ef%bc%8c%e5%8f%91%e7%8e%b0%e6%89%8b%e6%8a%8a%e6%89%8b%e6%9c%89%e6%97%b6%e5%80%99%e6%8c%ba%e5%9d%91%e4%ba%ba%e7%9a%84%ef%bc%8c%e6%af%95%e7%ab%9f%e7%bb%8f%e9%aa%8c%e8%bf%98%e6%98%af%e8%a6%81%e8%87%aa%e5%b7%b1%e6%94%92%ef%bc%8c%e4%b8%8d%e7%84%b6%e6%b2%a1%e8%b8%a9%e7%9a%84%e5%9d%91%e8%bf%9f%e6%97%a9%e8%a6%81%e8%b8%a9%e5%88%b0%ef%bc%8c%e6%9c%80%e7%bb%88%e6%88%91%e7%9a%84%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e6%9e%97%e6%b7%b1%e6%97%b6%e8%a7%81%e7%92%90%e6%90%ad%e5%bb%ba%e5%ae%8c%e6%88%90%ef%bc%8c%e8%bf%99%e7%af%87%e6%95%99%e7%a8%8b%e4%bc%9a%e4%bb%8e%e6%9c%ac%e5%9c%b0%e5%8d%9a%e5%ae%a2%e5%bb%ba%e7%ab%8b%e5%88%b0%e5%ae%9e%e7%8e%b0%e7%be%8e%e8%a7%82%e7%9a%84%e7%bd%91%e7%bb%9c%e5%8d%9a%e5%ae%a2%e8%bf%9b%e8%a1%8c%e8%ae%b0%e5%bd%95%e5%88%86%e4%ba%ab%ef%bc%8c%e8%bf%99%e7%af%87%e5%8d%9a%e5%ae%a2%e4%b9%9f%e5%b0%b1%e4%bc%9a%e9%9a%8f%e7%9d%80%e6%9c%ac%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%af%8f%e4%b8%80%e6%ac%a1%e5%8d%87%e7%ba%a7%e5%ae%8c%e5%96%84%e8%80%8c%e8%a1%a5%e5%85%85%ef%bc%8c%e5%b8%8c%e6%9c%9b%e8%83%bd%e7%bb%99%e6%83%b3%e8%87%aa%e5%bb%ba%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%9c%8b%e5%8f%8b%e4%bb%ac%e6%8f%90%e4%be%9b%e5%b8%ae%e5%8a%a9%e3%80%82%20%e6%9c%80%e5%88%9d%e7%9a%84%e8%af%9e%e7%94%9f%20%e6%88%91%e9%87%87%e7%94%a8%e7%9a%84%e6%90%ad%e5%bb%ba%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%96%b9%e5%bc%8f%e6%98%af%e4%bd%bf%e7%94%a8%20GitHub%20Pages%20&#43;%20Hexo%20%e7%9a%84%e6%96%b9%e5%bc%8f%ef%bc%8c%e8%bf%99%e4%b8%aa%e5%ba%94%e8%af%a5%e6%98%af%e6%88%91%e6%91%b8%e7%b4%a2%e4%b9%8b%e5%90%8e%e8%ae%a4%e4%b8%ba%e7%9a%84%e5%af%b9%e6%96%b0%e6%89%8b%e6%9c%80%e5%8f%8b%e5%a5%bd%e4%b9%9f%e6%9c%80%e4%bc%98%e8%b4%a8%e7%9a%84%e6%96%b9%e5%bc%8f%ef%bc%8c%e5%8f%aa%e9%9c%80%e8%a6%81%e6%8a%95%e5%85%a5%e6%97%b6%e9%97%b4%e2%80%a6%e2%80%a6&amp;pics=https://example.com/images/blog-1.png&amp;site=%e6%9e%97%e6%b7%b1%e6%97%b6%e8%a7%81%e7%92%90" title="分享到「QQ 空间」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item qrcode">
+                    <div class="qrcode-container" title="通过「二维码」"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qrcode-icon"><path d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64v-64zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z"/></svg><div id="qrcode-img"></div>
+                    </div>
+                    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+
+<script>
+    var typeNumber = 0;
+    var errorCorrectionLevel = 'L';
+    var qr = qrcode(typeNumber, errorCorrectionLevel);
+    qr.addData('https:\/\/example.com\/posts\/2019\/10\/12\/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2\/');
+    qr.make();
+    document.getElementById('qrcode-img').innerHTML = qr.createImgTag();
+</script>
+
+                </div>
+            
+
+        </div>
+
+    </div>
+
+
+
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="../../../../../posts/2020/01/30/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" class="related-link">博客优化(Hexo博客Next主题设计)</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="../../../../../posts/2020/02/09/hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2pwa/" class="related-link">Hexo博客部署PWA</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="../../../../../posts/2020/02/17/git%E4%B8%93%E6%A0%8F/" class="related-link">Git专栏系列</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="../../../../../posts/2020/06/18/%E5%AE%9A%E6%97%B6%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E5%8A%A8%E6%80%81%E5%85%AC%E7%BD%91ip/" class="related-link">定时自动获取动态公网IP</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="../../../../../posts/2020/03/24/%E7%8E%A9%E8%BD%AC%E6%A0%91%E8%8E%93%E6%B4%BE%E4%BA%8C/" class="related-link">玩转树莓派（二）配置V2ray客户端及透明网关</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="../../../../../tags/hexo/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>Hexo</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="../../../../../tags/next/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>Next</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="../../../../../tags/github/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>GitHub</a>
+                
+            
+        </div>
+    
+
+
+
+        
+
+
+        
+
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="../../../../../posts/2019/10/12/latex%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" rel="prev">&lt; LaTeX-安装教程</a>
+                </li>
+            
+            
+        </ul>
+    
+
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2019–2020&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;L1n</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div>
+
+            
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true,
+        header: '[data-scroll-header]'
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module" defer></script>
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
