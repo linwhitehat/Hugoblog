@@ -8,7 +8,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>L1n&#39;s Blog</title>
-        <link>https://https://github.com/linwhitehat/Blog/en/</link>
+        <link>https://linwhitehat.github.io/Hugoblog/en/</link>
         <description>L1n&#39;s Blog in English.</description>
         <generator>Hugo 0.74.2 https://gohugo.io/</generator>
         
@@ -23,9 +23,9 @@
         
             <copyright>The article is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en).</copyright>
         
-        <lastBuildDate>Mon, 01 Feb 2021 14:53:10 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 03 Feb 2021 14:06:12 &#43;0800</lastBuildDate>
         
-            <atom:link rel="self" type="application/rss&#43;xml" href="https://https://github.com/linwhitehat/Blog/en/rss.xml" />
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://linwhitehat.github.io/Hugoblog/en/rss.xml" />
         
         
     </channel>

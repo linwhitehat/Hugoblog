@@ -3,32 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://https://github.com/linwhitehat/Blog/en/about/</loc>
+    <loc>https://linwhitehat.github.io/Hugoblog/en/about/</loc>
     <lastmod>2020-07-19T20:44:19+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://https://github.com/linwhitehat/Blog/about/"
+                href="https://linwhitehat.github.io/Hugoblog/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://https://github.com/linwhitehat/Blog/en/about/"
+                href="https://linwhitehat.github.io/Hugoblog/en/about/"
                 />
   </url>
   
   <url>
-    <loc>https://https://github.com/linwhitehat/Blog/en/</loc>
+    <loc>https://linwhitehat.github.io/Hugoblog/en/</loc>
     <lastmod>2020-07-19T20:44:19+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://https://github.com/linwhitehat/Blog/"
+                href="https://linwhitehat.github.io/Hugoblog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://https://github.com/linwhitehat/Blog/en/"
+                href="https://linwhitehat.github.io/Hugoblog/en/"
                 />
   </url>
   
