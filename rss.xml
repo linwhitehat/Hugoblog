@@ -1,4 +1,138 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>林深时见璐</title><link>https://linwhitehat.github.io/</link><description>L1n's Blog</description><generator>Hugo 0.74.2 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>eric_lin_cn@outlook.com (L1n)</managingEditor><webMaster>eric_lin_cn@outlook.com (L1n)</webMaster><copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright><lastBuildDate>Wed, 03 Feb 2021 16:15:42 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://linwhitehat.github.io/rss.xml"/><item><title>B站投稿·视频无水印化</title><link>https://linwhitehat.github.io/posts/2020/06/30/b%E7%AB%99%E6%8A%95%E7%A8%BF/</link><guid isPermaLink="true">https://linwhitehat.github.io/posts/2020/06/30/b%E7%AB%99%E6%8A%95%E7%A8%BF/</guid><pubDate>Tue, 30 Jun 2020 18:26:17 +0000</pubDate><author>eric_lin_cn@outlook.com (L1n)</author><copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright><description>&lt;p>业余博主的生活小技能提升之旅开始在博客中分享了，随着今年B站周年庆的浪潮，博主也开始入住B站，做一些视频搬运和超简洁视频剪接的内容，而最烦人的就是素材包含水印以及剪辑完成视频后带上了软件水印或广告，由此博主开始了不亏本的无水印视频制作之旅，最终将剪接视频发布在了哔哩哔哩&lt;sup id="fnref:1">&lt;a href="https://linwhitehat.github.io/posts/2020/06/30/b%E7%AB%99%E6%8A%95%E7%A8%BF/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>，算是入坑UP主行列。~（撒花 &lt;em>★,°&lt;/em>:.☆(￣▽￣)/$:&lt;em>.°★&lt;/em> 。）~&lt;br />
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>林深时见璐</title><link>https://linwhitehat.github.io/</link><description>L1n's Blog</description><generator>Hugo 0.74.2 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>eric_lin_cn@outlook.com (L1n)</managingEditor><webMaster>eric_lin_cn@outlook.com (L1n)</webMaster><copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright><lastBuildDate>Thu, 04 Feb 2021 23:17:52 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://linwhitehat.github.io/rss.xml"/><item><title>HUGO博客搭建</title><link>https://linwhitehat.github.io/posts/2021/02/04/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link><guid isPermaLink="true">https://linwhitehat.github.io/posts/2021/02/04/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid><pubDate>Wed, 03 Feb 2021 18:26:17 +0000</pubDate><author>eric_lin_cn@outlook.com (L1n)</author><copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright><description>&lt;p>之前的博客是基于&lt;code>Hexo.Mist&lt;/code>搭建完成的，由于个人对前端的学习有限，我了解到&lt;code>Hugo.Meme&lt;/code>后，更喜欢这种简约感，因此将博客转至此。最初的博客雏形一般都比较朴素，功能也有限，通过优化主题来进行美化博客外观和拓展博客功能依旧是转移博客后的必要工作。&lt;a href="https://linwhitehat.github.io/Blog/">旧博客&lt;/a>仍然可以继续访问，&lt;code>Hexo&lt;/code>和&lt;code>Hugo&lt;/code>搭建的博客均以&lt;code>GithubPage&lt;/code>的形式发布。&lt;/p>
+&lt;!-- more -->
+&lt;h2 id="hugo博客">HUGO博客&lt;/h2>
+&lt;p>去年12月我将博客内容迁移到&lt;a href="https://gohugo.io/">Hugo&lt;/a>，选择了主题&lt;a href="https://github.com/reuixiy/hugo-theme-meme">Meme&lt;/a>，机缘来自我的友链中&lt;a href="https://guanqr.com/">荷戟独彷徨&lt;/a>和&lt;a href="https://io-oi.me/">reuixiy&lt;/a>。起初搭建个人博客是希望锻炼一下自己的前端动手能力和记录一下生活，选择了简易的&lt;code>Hexo.Next&lt;/code>，同时也查阅了很多资料进行&lt;a href="https://linwhitehat.github.io/Hugoblog/posts/2020/01/30/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/">博客个性化修改&lt;/a>。之所以选择迁移博客框架，主要还是想在一个简洁画风下更多的分享内容，将博客的内容专注在文字上。&lt;br />
+这篇博客将完整讲述博客迁移的过程，对遇到的一些问题及解决方法也会一起阐述。&lt;/p>
+&lt;h3 id="hugo安装">HUGO安装&lt;/h3>
+&lt;p>这部分内容基本遵循&lt;a href="https://gohugo.io/getting-started/quick-start/">官方文档&lt;/a>进行。&lt;/p>
+&lt;ol>
+&lt;li>下载与安装&lt;br />
+在&lt;code>Hugo&lt;/code>的&lt;a href="https://github.com/gohugoio/hugo/releases">开源地址&lt;/a>下载所需发布版本，我的电脑系统是&lt;code>Windows-64&lt;/code>，因此选择下图中的对应版本下载。下载后的压缩包解压之后便是&lt;code>HUGO&lt;/code>的安装目录，将此目录加入系统环境变量。之后在&lt;code>CMD&lt;/code>命令行下输入&lt;code>hugo version&lt;/code>，显示正确的版本信息等即表示成功安装。&lt;br />
+&lt;img src="https://linwhitehat.github.io/Hugoblog/images/HUGO_1.jpg" alt="HUGO下载" title="HUGO下载" />&lt;/li>
+&lt;li>创建网站&lt;br />
+要搭建自己的博客，需要先建立本地网站目录。在&lt;code>CMD&lt;/code>命令行下进入作为离线存储博客内容的目录，输入以下命令新建网站目录。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">hugo new site Myblog
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="博客迁移">博客迁移&lt;/h3>
+&lt;ol>
+&lt;li>博客主题&lt;br />
+搭建完&lt;code>HUGO&lt;/code>环境之后，在官方的&lt;a href="https://themes.gohugo.io/">主题网站&lt;/a>选择喜欢的主题框架并下载到本地。在刚刚新建的网站目录&lt;code>Myblog&lt;/code>下新建一个目录&lt;code>themes&lt;/code>，在这个目录下存放下载的主题文件。启用博客主题需要修改&lt;code>HUGO&lt;/code>配置文件，即在博客目录&lt;code>Myblog&lt;/code>下的&lt;code>config.toml&lt;/code>。在配置文件中添加&lt;code>theme&lt;/code>内容，具体如下：&lt;/li>
+&lt;/ol>
+&lt;pre>&lt;code>baseURL = &amp;quot;https://linwhitehat.github.io&amp;quot;
+title = &amp;quot;林深时见璐&amp;quot;
+languageCode = &amp;quot;zh-CN&amp;quot;
+hasCJKLanguage = true
+theme = &amp;quot;meme&amp;quot;
+&lt;/code>&lt;/pre>&lt;ol start="2">
+&lt;li>内容迁移&lt;br />
+启用博客主题之后，将旧博客中的内容迁移到新博客中，这需要了解&lt;code>HUGO&lt;/code>的博客基本框架，具体如下：&lt;/li>
+&lt;/ol>
+&lt;pre>&lt;code>.
+├── archetypes # 内容类型，在创建新内容时自动生成内容的配置
+├── content # 网站内容，Markdown 文件
+├── data
+├── layouts # 网站模版，选择主题后会将主题中的 layouts 文件夹中的内容复制到此文件夹中
+├── static # 包含 CSS、JavaScript、Fonts、media、image 等，决定网站的外观。
+├── themes # 存放主题文件
+├── public # 可公开静态内容
+└── config.toml # 网站的配置文件
+&lt;/code>&lt;/pre>&lt;p>博客文章是存储在&lt;code>content&lt;/code>目录下，图片、前端渲染等是存储在&lt;code>static&lt;/code>目录下，因此我们将原先&lt;code>Hexo&lt;/code>博客下的内容分别迁移到相应目录下即可。&lt;/p>
+&lt;h3 id="博客本地预览">博客本地预览&lt;/h3>
+&lt;p>在正式发布博客之前，可以在本地预览博客内容并进行调试修改。在&lt;code>CMD&lt;/code>下执行下述命令进行预览：&lt;/p>
+&lt;pre>&lt;code># 启动 HUGO
+hugo server -D
+# 启动成功会显示下述内容
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+&lt;/code>&lt;/pre>&lt;p>此时，在本地浏览器访问&lt;code>http://localhost:1313/&lt;/code>便能看到博客。&lt;/p>
+&lt;h3 id="githubpage发布">GITHUBPAGE发布&lt;/h3>
+&lt;p>将本地博客最终发布到&lt;code>GithubPage&lt;/code>前，需要生成可发布的静态文件。在&lt;code>CMD&lt;/code>下执行下述命令：&lt;/p>
+&lt;pre>&lt;code># 生成博客网站
+hugo
+&lt;/code>&lt;/pre>&lt;p>此时在博客目录&lt;code>Myblog&lt;/code>下的&lt;code>public&lt;/code>目录会生成可用于发布的博客内容，将整个目录上传到&lt;code>GithubPage&lt;/code>仓库即可。&lt;/p>
+&lt;h3 id="避雷">避雷&lt;/h3>
+&lt;p>上述步骤完成，基本博客内容的迁移就完成了，至于&lt;code>HUGO&lt;/code>主题框架的具体配置可参照配置文件进行基础修改。但是要正确部署还有不少雷区需要注意，如果没有正确认识这些问题可能博客并无法像本地预览的效果一样。&lt;/p>
+&lt;ol>
+&lt;li>baseURL设置&lt;br />
+一般而言，搭建&lt;code>GithubPage&lt;/code>时我们只会把二级域名当作博客地址，但是由于我制作了博客主页，因此增加了子目录的网站地址才是我博客内容的真正地址。此时，容易误解&lt;code>baseURL&lt;/code>而将博客网站的地址填写在配置中，因为&lt;code>Hexo&lt;/code>配置的时候便需要标明博客的具体网站地址（包括子目录），然而实际却非如此。正确配置举例对比如下：&lt;/li>
+&lt;/ol>
+&lt;pre>&lt;code># Hexo URL
+https://linwhitehat.github.io/Hugoblog/
+# Hugo baseURL
+https://linwhitehat.github.io/
+&lt;/code>&lt;/pre>&lt;p>如果配置错误可以在部署之后在网站控制台找到错误信息，一般是显示资源找不到的错误，对比错误资源地址可以确认正确&lt;code>baseURL&lt;/code>的填写。&lt;br />
+2. 完整性检验&lt;br />
+对于资源完整性检验在搭建&lt;code>GithubPage&lt;/code>博客中不是很友好，因此需要将其设置为&lt;code>false&lt;/code>才能正确链接和渲染前端资源文件，否则会显示&lt;code>Failed to find a valid digest in the 'integrity' attribute for resource&lt;/code>等错误。&lt;/p>
+&lt;h2 id="个人博客主页">个人博客主页&lt;/h2>
+&lt;p>很多现有的博客框架主题都将文章作为博客首页，也有少数有自身主页的博客主题，但是修改起来可能需要更多熟悉主题框架结构。为了更便利和自主搭建自己的博客首页，我自定义了一个静态网站作为自己的&lt;a href="https://linwhitehat.github.io/">博客首页&lt;/a>，修改方便而且不容易和别人的撞衫。目前主页源码已经&lt;a href="https://github.com/linwhitehat/linwhitehat.github.io">开源&lt;/a>，欢迎读者作为自己的博客模板进一步加工制作属于自己的博客首页。&lt;br />
+&lt;img src="https://linwhitehat.github.io/Hugoblog/images/HUGO_2.jpg" alt="博客主页" title="博客主页" />&lt;/p>
+&lt;h2 id="结束">结束&lt;/h2>
+&lt;p>博客包含的可能不只是文字，图片和简单的前端知识，我想也有审美，艺术和丰富的建站体验。在2021年，我会更专注于所学，静下心，将内容输出为系列文章，提高博客的质量。那么就以这篇为开始吧！&lt;/p>
+&lt;h2 id="彩蛋">彩蛋&lt;/h2>
+&lt;p>** 微软资源告别龟速下载 **&lt;br />
+知名的&lt;code>MSDN&lt;/code>告诉了我们微软的资源可以便捷的找到，但是镜像资源的庞大让没有迅雷会员的我总是苦于漫长的等待。当我想建立一个微软操作系统的虚拟机进行某个实验时，如果长时间去等待下载，一来让我有种一件事还没完成但是却不能马上完成的焦躁，其次也让我耗费时间去记录此时的想法以等待具备可实验的环境时进行实操。那么，怎么解决呢？告别&lt;code>MSDN&lt;/code>+迅雷的组合，使用微软官方+&lt;code>IDM&lt;/code>，尽情享受高速体验下载微软资源的快乐吧！&lt;/p>
+&lt;ol>
+&lt;li>微软官方镜像链接&lt;br />
+访问&lt;a href="https://www.microsoft.com/zh-cn/software-download/windows10">微软官网&lt;/a>，此时看到的官网显示的是&lt;code>立即下载工具&lt;/code>而没有镜像下载链接。接着，打开浏览器的开发者工具，按照下图标记的位置，打开&lt;code>Remote devices&lt;/code>模式即手机模式，之后刷新网站并按照提示选择便能看到镜像下载链接。&lt;br />
+&lt;img src="https://linwhitehat.github.io/Hugoblog/images/HUGO_3.jpg" alt="手机模式设置" title="手机模式设置" />&lt;br />
+&lt;img src="https://linwhitehat.github.io/Hugoblog/images/HUGO_4.jpg" alt="下载镜像" title="下载镜像" />&lt;/li>
+&lt;li>IDM下载&lt;br />
+在浏览器中安装&lt;code>IDM&lt;/code>插件，点击上一步中的镜像下载后跳转到&lt;code>IDM&lt;/code>进行下载即可。&lt;/li>
+&lt;/ol></description><category domain="https://linwhitehat.github.io/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</category><category domain="https://linwhitehat.github.io/categories/%E5%8D%9A%E5%AE%A2/">博客</category><category domain="https://linwhitehat.github.io/tags/hugo/">HUGO</category><category domain="https://linwhitehat.github.io/tags/meme/">Meme</category></item><item><title>学术辅助利器</title><link>https://linwhitehat.github.io/posts/2020/12/22/%E5%AD%A6%E6%9C%AF%E8%BE%85%E5%8A%A9%E5%88%A9%E5%99%A8/</link><guid isPermaLink="true">https://linwhitehat.github.io/posts/2020/12/22/%E5%AD%A6%E6%9C%AF%E8%BE%85%E5%8A%A9%E5%88%A9%E5%99%A8/</guid><pubDate>Tue, 22 Dec 2020 18:26:17 +0000</pubDate><author>eric_lin_cn@outlook.com (L1n)</author><copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright><description>&lt;p>本文中提及的内容默认是偏计算机相关学科的学生，但是有一些技巧或工具是通用的，并不局限于某一学科，如果学会使用也将带来极大的便利和帮助，例如Latex写作，除了论文写作和书籍刊物，在日常的会议记录，课程笔记中也能使用，因为它解决了排版繁琐的问题，只需要做好摸板，便能全文统一适用，无论是图表，标题，目录还是公式，定义推导都能规范显示。本文的作用在于推荐，最终使用后续可能会针对不同工具写个小博文。&lt;/p>
+&lt;!-- more -->
+&lt;h2 id="论文查阅下载辅助小工具">论文查阅下载辅助小工具&lt;/h2>
+&lt;h3 id="ccfrank4dblp">CCFRank4dblp&lt;/h3>
+&lt;p>CCFRank4dblp&lt;sup id="fnref:1">&lt;a href="https://linwhitehat.github.io/posts/2020/12/22/%E5%AD%A6%E6%9C%AF%E8%BE%85%E5%8A%A9%E5%88%A9%E5%99%A8/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>，在dblp数据库或谷歌学术查阅论文时自动显示论文所在会议或期刊的CFF等级，对于不熟悉CCF最新列表的研究人员十分友好，可以在查阅论文的同时找到最佳的目标论文。目前可以在Chrome和Firefox的扩展应用市场中添加为浏览器插件。&lt;/p>
+&lt;h3 id="acpt4dblp">ACPT4dblp&lt;/h3>
+&lt;p>Auto Collect Paper Toolkit(ACP4dblp)&lt;sup id="fnref:2">&lt;a href="https://linwhitehat.github.io/posts/2020/12/22/%E5%AD%A6%E6%9C%AF%E8%BE%85%E5%8A%A9%E5%88%A9%E5%99%A8/#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>，自动化论文下载工具，能够实现根据会议名称自动下载指定年份的论文和演讲的pdf文件，目前适配了USENIX的刊物，只需要修改目标刊物的配置信息即可适配更多的刊物。目前支持Python3环境。&lt;/p>
+&lt;h2 id="写作">写作&lt;/h2>
+&lt;h3 id="latex">Latex&lt;/h3>
+&lt;p>使用Latex写作是在出版刊物中常用的一种方式，通用的模板使得大批的文章能够使用同样的排版，保证格式统一且工整。这里推荐的两种方式是本地编译和在线编译，从使用上手角度而言，在线编译会更加容易使用，但是本地编译的自定义会更丰富一些。&lt;/p>
+&lt;h4 id="texlive--texstudio">TexLive + Texstudio&lt;/h4>
+&lt;p>这种方式是本地编译的方式，具体安装教程在之前的一篇博客中详细叙述，可查看&lt;a href="https://linwhitehat.github.io/Blog/2019/10/12/LaTeX%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html">LaTeX-安装教程&lt;/a>。&lt;br />
+使用本地编译会在IDE中显示Latex的语法错误以及检查词语使用等基本错误，能够减少很多常见的错误并在编译前解决。&lt;/p>
+&lt;h4 id="overleaf">Overleaf&lt;/h4>
+&lt;p>这种方式是在线编译的方式&lt;sup id="fnref:3">&lt;a href="https://linwhitehat.github.io/posts/2020/12/22/%E5%AD%A6%E6%9C%AF%E8%BE%85%E5%8A%A9%E5%88%A9%E5%99%A8/#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>，使用起来和word很相似。选择好模板，直接输入文章内容可以实时预览编译结果，对于是否是Latex编译的感知不会很强，因此友好度较高。&lt;br />
+使用在线编译会有在线语法检测，而且不用担心Latex的编译问题，操作方便，上手简单，但是依托第三方平台，可能会有付费服务。&lt;/p>
+&lt;h3 id="grammarly">Grammarly&lt;/h3>
+&lt;p>这是常见的用于英语语法检测的在线工具，可在&lt;a href="https://www.grammarly.com/">官方地址&lt;/a>试用效果，该工具支持浏览器插件模式。对常见的写作语法错误和语句可读性能够提供一定的帮助，适合用于基本写作语法的检查。Grammarly能够自定义文章的检查指标，根据不同检查指标会呈现不同的检查结果，并且通过文章分值的形式展示文章的可读性水平。&lt;/p>
+&lt;p>&lt;img src="https://linwhitehat.github.io/Blog/images/grammarly.png" alt="Grammarly语法检查效果" title="Grammarly语法检查效果" />&lt;/p>
+&lt;h2 id="绘图">绘图&lt;/h2>
+&lt;h3 id="微软三件套">微软三件套&lt;/h3>
+&lt;p>微软的Office系列常用于办公使用，但是由于其功能的丰富性，用于论文的绘图也是十分有效的。此处的微软三件套包括Office Excel，Powerpoint和Visio，基本绘图都可以在这三者之间转换和绘制，之后会展示论文中使用此类工具绘制的图片。个人认为这是最易入门和使用的绘图工具。&lt;/p>
+&lt;h3 id="origin">Origin&lt;/h3>
+&lt;p>这是专业性的学术绘图工具，本身绘图模板和教程都十分丰富，也有官方汉化版，学生可以通过学校优秀申请免费使用教育版，十分便利。就我个人而言，这个绘图工具需要一段时间的摸索熟悉之后才能高效地绘制所需的图片，图片的自定义性取决于使用熟悉度。个人认为这是具有一定难度的绘图工具，但熟悉之后也是高效的绘图工具。&lt;/p>
+&lt;h3 id="gephi">Gephi&lt;/h3>
+&lt;p>这是绘制数据可视化图的利器，可用于描述「对象与对象之间有关联关系或相互作用」的数据表现形式，分别采用了「关系图」和「一般图」来描述，其中关系图可以直观地展示多个对象之间的关联关系，如网络图。个人认为这是具有一定难度的绘图工具。&lt;br />
+Gephi的安装十分简单，在&lt;a href="https://gephi.org/">官网&lt;/a>下载安装即可，但是需要注意的是，此工具需要Java(1.8以上版本)环境支持，因此安装完成后做以下配置即可使用：&lt;/p>
+&lt;ol>
+&lt;li>安装Java，具体教程见另一篇博客中的介绍&lt;a href="https://linwhitehat.github.io/Blog/2020/01/28/%E5%BE%AE%E8%BD%AF%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html">微软系统使用手册&lt;/a>。&lt;/li>
+&lt;li>因为默认配置(Gephi安装目录/etc/gephi.conf)读取的JDK路径是Linux下的，将其修改为当前Windows安装路径即可，否则会因为JDK路径问题报错&lt;code>can’t find java 1.8 or higher&lt;/code>。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://linwhitehat.github.io/Blog/images/gephi.png" alt="修改Gephi配置" title="修改Gephi配置" />&lt;/p>
+&lt;h2 id="结束">结束&lt;/h2>
+&lt;p>本文以介绍为主，旨在记录哪些工具对于学术科研具有帮助，因此写的十分简要，后续会不断补充。&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr />
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a href="https://github.com/WenyanLiu/CCFrank4dblp">CCFRank4dblp&lt;/a> &lt;a href="https://linwhitehat.github.io/posts/2020/12/22/%E5%AD%A6%E6%9C%AF%E8%BE%85%E5%8A%A9%E5%88%A9%E5%99%A8/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a href="https://github.com/linwhitehat/ACPT4dblp">ACPP4dblp&lt;/a> &lt;a href="https://linwhitehat.github.io/posts/2020/12/22/%E5%AD%A6%E6%9C%AF%E8%BE%85%E5%8A%A9%E5%88%A9%E5%99%A8/#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3" role="doc-endnote">
+&lt;p>&lt;a href="https://www.overleaf.com/">Overleaf&lt;/a> &lt;a href="https://linwhitehat.github.io/posts/2020/12/22/%E5%AD%A6%E6%9C%AF%E8%BE%85%E5%8A%A9%E5%88%A9%E5%99%A8/#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description><category domain="https://linwhitehat.github.io/categories/%E5%AD%A6%E6%9C%AF/">学术</category><category domain="https://linwhitehat.github.io/categories/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/">论文写作</category><category domain="https://linwhitehat.github.io/tags/ccf/">CCF</category><category domain="https://linwhitehat.github.io/tags/%E5%86%99%E4%BD%9C/">写作</category><category domain="https://linwhitehat.github.io/tags/%E7%BB%98%E5%9B%BE/">绘图</category><category domain="https://linwhitehat.github.io/tags/gephi/">Gephi</category></item><item><title>B站投稿·视频无水印化</title><link>https://linwhitehat.github.io/posts/2020/06/30/b%E7%AB%99%E6%8A%95%E7%A8%BF/</link><guid isPermaLink="true">https://linwhitehat.github.io/posts/2020/06/30/b%E7%AB%99%E6%8A%95%E7%A8%BF/</guid><pubDate>Tue, 30 Jun 2020 18:26:17 +0000</pubDate><author>eric_lin_cn@outlook.com (L1n)</author><copyright>本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。</copyright><description>&lt;p>业余博主的生活小技能提升之旅开始在博客中分享了，随着今年B站周年庆的浪潮，博主也开始入住B站，做一些视频搬运和超简洁视频剪接的内容，而最烦人的就是素材包含水印以及剪辑完成视频后带上了软件水印或广告，由此博主开始了不亏本的无水印视频制作之旅，最终将剪接视频发布在了哔哩哔哩&lt;sup id="fnref:1">&lt;a href="https://linwhitehat.github.io/posts/2020/06/30/b%E7%AB%99%E6%8A%95%E7%A8%BF/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>，算是入坑UP主行列。~（撒花 &lt;em>★,°&lt;/em>:.☆(￣▽￣)/$:&lt;em>.°★&lt;/em> 。）~&lt;br />
 &lt;img src="https://linwhitehat.github.io/images/Life-1.webp" alt="哔哩哔哩" title="哔哩哔哩" />&lt;/p>
 &lt;!-- more -->
 &lt;p>这次剪辑技能的点亮也算是一时兴起，虽然并不是满满的技能树，但也算敲开了剪辑的窗户，博主本身喜欢看一些漫画和动画，本次素材也是基于国漫&lt;code>斗罗大陆&lt;/code>，一部由小说改编的国产动画，最近恰逢剧情中的一大高燃部分开播，因此便想着剪辑一起放到B站，起初想法很简单，获取视频动画素材然后剪接一起，似乎没有什么问题，但是一上手才发现素材来源带有水印，使用软件剪辑大部分都会附加水印，大部分市面宣传的去水印软件效果并不理想，甚至还想坑我钱财。而究其原因则有以下几点：&lt;/p>
